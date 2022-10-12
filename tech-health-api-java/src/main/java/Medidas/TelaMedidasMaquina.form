@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" pref="59" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel11" min="-2" pref="59" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblIdMaq3" min="-2" pref="42" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel12" min="-2" pref="59" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="247" max="-2" attributes="0"/>
+                              <Component id="jLabel13" min="-2" pref="59" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="306" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblUsoMemoriaMaq4" min="-2" pref="59" max="-2" attributes="0"/>
+                                  <Component id="lblAlaHospMaq4" min="-2" pref="69" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="lblUsoMemoriaMaq2" min="-2" pref="59" max="-2" attributes="0"/>
+                          <Component id="lblAlaHospMaq2" min="-2" pref="69" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblAlaHospMaq3" min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="lblUsoMemoriaMaq3" min="-2" pref="59" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="306" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="lblUsoProcessMaq01" min="-2" pref="144" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="lblUsoProcessMaq2" min="-2" pref="144" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="lblUsoCpuMaq2" min="-2" pref="140" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="lblDataMaq2" min="-2" pref="127" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="lblUsoMemoriaMaq01" min="-2" pref="59" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="lblIdMaq01" min="-2" pref="42" max="-2" attributes="0"/>
+                                              <Component id="lblAlaHospMaq01" min="-2" pref="69" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                      <Component id="lblUsoCpuMaq01" min="-2" pref="140" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="lblUsoRamMaq01" min="-2" pref="144" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
+                                      <Component id="lblIdMaq2" min="-2" pref="42" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btnAtualizarMedidasMaq2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblUsoRamMaq2" min="-2" pref="144" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                              <Component id="lblLeitDiscoMaq01" min="-2" pref="62" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="btnAtualizarMedidasMaq01" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                                  <Component id="lblDataMaq01" min="-2" pref="141" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
+                      <Component id="lblLeitDiscoMaq2" min="-2" pref="62" max="-2" attributes="0"/>
+                      <EmptySpace pref="123" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="542" max="-2" attributes="0"/>
+                      <Component id="lblIdMaq4" min="-2" pref="42" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="lblUsoProcessMaq3" min="-2" pref="144" max="-2" attributes="0"/>
+                                  <Component id="lblUsoCpuMaq3" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lblUsoRamMaq3" alignment="1" min="-2" pref="144" max="-2" attributes="0"/>
+                                  <Component id="btnAtualizarMedidasMaq3" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="lblUsoCpuMaq4" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lblUsoProcessMaq4" min="-2" pref="144" max="-2" attributes="0"/>
+                                  <Component id="lblUsoRamMaq4" min="-2" pref="144" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="btnAtualizarMedidasMaq4" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="lblDataMaq3" min="-2" pref="127" max="-2" attributes="0"/>
+                                          <Component id="lblLeitDiscoMaq3" min="-2" pref="62" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="251" max="-2" attributes="0"/>
+                                              <Component id="lblLeitDiscoMaq4" min="-2" pref="62" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
+                                              <Component id="lblDataMaq4" min="-2" pref="127" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="580" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="btnVerInfMaq" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="559" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jLabel1" min="-2" pref="25" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblIdMaq01" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblIdMaq2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblIdMaq4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblIdMaq3" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAlaHospMaq01" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAlaHospMaq2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAlaHospMaq3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAlaHospMaq4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoMemoriaMaq01" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoMemoriaMaq2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoMemoriaMaq3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoMemoriaMaq4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoCpuMaq01" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoCpuMaq2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoCpuMaq3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoCpuMaq4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoProcessMaq01" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoProcessMaq2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoProcessMaq3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoProcessMaq4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoRamMaq01" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoRamMaq2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoRamMaq3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsoRamMaq4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblLeitDiscoMaq01" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblLeitDiscoMaq2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblLeitDiscoMaq3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblLeitDiscoMaq4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblDataMaq01" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblDataMaq2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblDataMaq3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblDataMaq4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnAtualizarMedidasMaq01" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAtualizarMedidasMaq2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAtualizarMedidasMaq3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAtualizarMedidasMaq4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="60" max="32767" attributes="0"/>
+              <Component id="btnVerInfMaq" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="11" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Medidas das Maquinas"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="33" red="33" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="M&#xe1;quina 1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="11" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="ID da M&#xe1;quina:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblIdMaq01">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="11" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Ala Hospitalar:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblAlaHospMaq01">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="11" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Uso da Memoria:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoMemoriaMaq01">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel6">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="11" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="%Uso da CPU no processo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoCpuMaq01">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel7">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="11" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="%Uso do Processador:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoProcessMaq01">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel8">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="11" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="%Uso da RAM no processo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoRamMaq01">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel9">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="11" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Numero de leituras no disco:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblLeitDiscoMaq01">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel10">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="11" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Data e Hora:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblDataMaq01">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAtualizarMedidasMaq01">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Atualizar Medidas"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtualizarMedidasMaq01ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblDataMaq2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel11">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="33" red="33" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="M&#xe1;quina 2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel12">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="33" red="33" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="M&#xe1;quina 3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel13">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="33" red="33" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="M&#xe1;quina 4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblIdMaq2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblAlaHospMaq2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoCpuMaq2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoProcessMaq2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoRamMaq2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblLeitDiscoMaq2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAtualizarMedidasMaq2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Atualizar Medidas"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtualizarMedidasMaq2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblIdMaq4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblAlaHospMaq3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblIdMaq3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblAlaHospMaq4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoMemoriaMaq2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoMemoriaMaq3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoCpuMaq3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoCpuMaq4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoMemoriaMaq4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoProcessMaq3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoProcessMaq4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoRamMaq3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblUsoRamMaq4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblLeitDiscoMaq3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblLeitDiscoMaq4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblDataMaq3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblDataMaq4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-----"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAtualizarMedidasMaq3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Atualizar Medidas"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtualizarMedidasMaq3ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAtualizarMedidasMaq4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Atualizar Medidas"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtualizarMedidasMaq4ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnVerInfMaq">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ver Informa&#xe7;&#xf5;es das M&#xe1;quinas"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVerInfMaqActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
