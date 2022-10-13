@@ -43,7 +43,7 @@ public class MainMedidas {
 
         DiscoGrupo grupoDeDiscos = new DiscoGrupo();
         List<Disco> discos = grupoDeDiscos.getDiscos();
-            
+
         ProcessoGrupo grupoProcesso = new ProcessoGrupo();
         List<Processo> processos = grupoProcesso.getProcessos();
 
@@ -52,11 +52,7 @@ public class MainMedidas {
         Double percent_Uso_Processador = processador.getUso();
         //Double percent_Uso_Ram_Processo = processo.getUsoMemoria();
         //Long numero_Leituras_Disco = disco.getLeituras();
-        String data = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
-        String hora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
-        String momento = data + hora;
 
-        
         //INSERINDO VALORES NA TABELA
         for (int i = 1; i <= 4; i++) {
             Integer fkMaquina = i;
@@ -66,19 +62,21 @@ public class MainMedidas {
                 for (int cont = (processos.size() - 1); cont < processos.size(); cont++) {
                     for (Disco itemDisco : discos) {
                         for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
-                            banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)", null, 
+                            String data = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
+                            String hora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
+                            String momento = data + hora;
+                            banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)", null,
                                     Conversor.formatarBytes(memoria.getEmUso()),
                                     percent_Uso_Cpu_Processo,
-                                    percent_Uso_Processador, percent_Uso_Ram_Processo, 
+                                    percent_Uso_Processador, percent_Uso_Ram_Processo,
                                     Conversor.formatarBytes(itemDisco.getLeituras()), momento, fkMaquina);
-                        }                       
+                        }
                     }
                 }
                 break;
             }
         }
 
-        
         System.out.println("MEDIDAS INSERIDAS");
 
         List<Medida> listaMedidas = banco.query("select maquina.idMaquina, maquina.ala_Hospitalar, memoria_Em_Uso,"

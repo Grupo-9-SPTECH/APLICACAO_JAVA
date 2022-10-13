@@ -169,7 +169,7 @@ public class LoginSwing extends javax.swing.JFrame {
         JdbcTemplate banco = connection.getConexao();
 
         Funcionario loginFuncionario = new Funcionario();
-
+      
         String strEmail = String.valueOf(txtEmail.getText());
         String strSenha = String.valueOf(txtSenha.getText());
 

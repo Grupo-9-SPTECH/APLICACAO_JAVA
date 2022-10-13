@@ -33,7 +33,6 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
     Memoria memoria = new Memoria();
     Processador processador = new Processador();
     Conversor conversor = new Conversor();
-    Date dataHoraAtual = new Date();
 
     DiscoGrupo grupoDeDiscos = new DiscoGrupo();
     List<Disco> discos = grupoDeDiscos.getDiscos();
@@ -48,34 +47,34 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
         initComponents();
         //CRIANDO VARIAVEIS PRA PEGAR AS MEDIDAS
         //Long memoria_Em_Uso = Conversor.formatarBytes(memoria.getEmUso()); -------- PS: essa foi direto no insert       
-//        Double percent_Uso_Processador = processador.getUso();
-//        //Double percent_Uso_Ram_Processo = processo.getUsoMemoria();
-//        //Long numero_Leituras_Disco = disco.getLeituras();
-//        String data = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
-//        String hora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
-//        String momento = data + hora;
-//
-//        //INSERINDO VALORES NA TABELA
-//        for (int i = 1; i <= 4; i++) {
-//            Integer fkMaquina = i;
-//            for (Processo itemProcesso : processos) {
-//                Double percent_Uso_Cpu_Processo = itemProcesso.getUsoCpu();
-//                Double percent_Uso_Ram_Processo = itemProcesso.getUsoMemoria();
-//                for (int cont = (processos.size() - 1); cont < processos.size(); cont++) {
-//                    for (Disco itemDisco : discos) {
-//                        for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
-//
-//                            banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)", null,
-//                                    Conversor.formatarBytes(memoria.getEmUso()),
-//                                    percent_Uso_Cpu_Processo,
-//                                    percent_Uso_Processador, percent_Uso_Ram_Processo,
-//                                    Conversor.formatarBytes(itemDisco.getLeituras()), momento, fkMaquina);
-//                        }
-//                    }
-//                }
-//                break;
-//            }
-//        }
+        //        Double percent_Uso_Processador = processador.getUso();
+        //        //Double percent_Uso_Ram_Processo = processo.getUsoMemoria();
+        //        //Long numero_Leituras_Disco = disco.getLeituras();
+        //        String data = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
+        //        String hora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
+        //        String momento = data + hora;
+        //
+        //        //INSERINDO VALORES NA TABELA
+        //        for (int i = 1; i <= 4; i++) {
+        //            Integer fkMaquina = i;
+        //            for (Processo itemProcesso : processos) {
+        //                Double percent_Uso_Cpu_Processo = itemProcesso.getUsoCpu();
+        //                Double percent_Uso_Ram_Processo = itemProcesso.getUsoMemoria();
+        //                for (int cont = (processos.size() - 1); cont < processos.size(); cont++) {
+        //                    for (Disco itemDisco : discos) {
+        //                        for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
+        //
+        //                            banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)", null,
+        //                                    Conversor.formatarBytes(memoria.getEmUso()),
+        //                                    percent_Uso_Cpu_Processo,
+        //                                    percent_Uso_Processador, percent_Uso_Ram_Processo,
+        //                                    Conversor.formatarBytes(itemDisco.getLeituras()), momento, fkMaquina);
+        //                        }
+        //                    }
+        //                }
+        //                break;
+        //            }
+        //        }
     }
 
     /**
@@ -507,9 +506,6 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
         Double percent_Uso_Processador = processador.getUso();
         //Double percent_Uso_Ram_Processo = processo.getUsoMemoria();
         //Long numero_Leituras_Disco = disco.getLeituras();
-        String novaData = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
-        String novaHora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
-        String novoMomento = novaData + novaHora;
 
         //INSERINDO VALORES NA TABELA
         for (Processo itemProcesso : processos) {
@@ -519,11 +515,17 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
                 for (Disco itemDisco : discos) {
                     for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
 
+                        Date dataHoraAtual = new Date();
+                        String novaData = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
+                        String novaHora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
+                        String novoMomento = novaData + novaHora;
+
                         banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)", null,
                                 Conversor.formatarBytes(memoria.getEmUso()),
                                 percent_Uso_Cpu_Processo,
                                 percent_Uso_Processador, percent_Uso_Ram_Processo,
                                 Conversor.formatarBytes(itemDisco.getLeituras()), novoMomento, "1");
+
                     }
                 }
             }
@@ -537,11 +539,11 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
                 + "numero_Leituras_Disco, momento from medida right join maquina "
                 + "on medida.fkMaquina = maquina.idMaquina"
                 + " where maquina.idMaquina = 1;", new BeanPropertyRowMapper(Medida.class));
-        for (int i = (listaMedidaMaq01.size() - 1); i < listaMedidaMaq01.size(); i++) {
-            System.out.println(listaMedidaMaq01.get(i));
 
-        }
-
+//        for (int i = (listaMedidaMaq01.size() - 1); i < listaMedidaMaq01.size(); i++) {
+//            System.out.println(listaMedidaMaq01.get(i));
+//
+//        }
         lblIdMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getIdMaquina().toString());
         lblAlaHospMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getAla_Hospitalar());
         lblUsoMemoriaMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getMemoria_Em_Uso());
@@ -560,9 +562,6 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
         Double percent_Uso_Processador = processador.getUso();
         //Double percent_Uso_Ram_Processo = processo.getUsoMemoria();
         //Long numero_Leituras_Disco = disco.getLeituras();
-        String novaData = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
-        String novaHora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
-        String novoMomento = novaData + novaHora;
 
         //INSERINDO VALORES NA TABELA
         for (Processo itemProcesso : processos) {
@@ -571,7 +570,10 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
             for (int cont = (processos.size() - 1); cont < processos.size(); cont++) {
                 for (Disco itemDisco : discos) {
                     for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
-
+                        Date dataHoraAtual = new Date();
+                        String novaData = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
+                        String novaHora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
+                        String novoMomento = novaData + novaHora;
                         banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)", null,
                                 Conversor.formatarBytes(memoria.getEmUso()),
                                 percent_Uso_Cpu_Processo,
@@ -607,10 +609,6 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
         //Long memoria_Em_Uso = Conversor.formatarBytes(memoria.getEmUso()); -------- PS: essa foi direto no insert       
         Double percent_Uso_Processador = processador.getUso();
         //Double percent_Uso_Ram_Processo = processo.getUsoMemoria();
-        //Long numero_Leituras_Disco = disco.getLeituras();
-        String novaData = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
-        String novaHora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
-        String novoMomento = novaData + novaHora;
 
         //INSERINDO VALORES NA TABELA
         for (Processo itemProcesso : processos) {
@@ -619,7 +617,10 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
             for (int cont = (processos.size() - 1); cont < processos.size(); cont++) {
                 for (Disco itemDisco : discos) {
                     for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
-
+                        Date dataHoraAtual = new Date();
+                        String novaData = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
+                        String novaHora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
+                        String novoMomento = novaData + novaHora;
                         banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)", null,
                                 Conversor.formatarBytes(memoria.getEmUso()),
                                 percent_Uso_Cpu_Processo,
@@ -651,14 +652,11 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
 
     //MAQUINA 4
     private void btnAtualizarMedidasMaq4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarMedidasMaq4ActionPerformed
-       //CRIANDO VARIAVEIS PRA PEGAR AS MEDIDAS
+        //CRIANDO VARIAVEIS PRA PEGAR AS MEDIDAS
         //Long memoria_Em_Uso = Conversor.formatarBytes(memoria.getEmUso()); -------- PS: essa foi direto no insert       
         Double percent_Uso_Processador = processador.getUso();
         //Double percent_Uso_Ram_Processo = processo.getUsoMemoria();
         //Long numero_Leituras_Disco = disco.getLeituras();
-        String novaData = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
-        String novaHora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
-        String novoMomento = novaData + novaHora;
 
         //INSERINDO VALORES NA TABELA
         for (Processo itemProcesso : processos) {
@@ -667,7 +665,10 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
             for (int cont = (processos.size() - 1); cont < processos.size(); cont++) {
                 for (Disco itemDisco : discos) {
                     for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
-
+                        Date dataHoraAtual = new Date();
+                        String novaData = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
+                        String novaHora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
+                        String novoMomento = novaData + novaHora;
                         banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)", null,
                                 Conversor.formatarBytes(memoria.getEmUso()),
                                 percent_Uso_Cpu_Processo,
