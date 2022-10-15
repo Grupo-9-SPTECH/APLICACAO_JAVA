@@ -65,35 +65,7 @@ public class MainComputador {
             break;
         }
         
-        //MAQUINA 2
-        for (Disco itemDisco : discos) {
-            for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
-                banco.update("INSERT INTO maquina VALUES (?, ?, ?, ?,?, ?, ?, ?, ?, ?)",
-                        null, "Recepção", sistema_Operacional, fabricante, nome_Processador, Conversor.formatarBytes(processador.getFrequencia()), Conversor.formatarBytes(memoria.getTotal()),
-                        Conversor.formatarBytes(itemDisco.getTamanho()), numero_CPU_fisica, "2");
-            }
-            break;
-        }
-              
-        //MAQUINA 3
-        for (Disco itemDisco : discos) {;
-            for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
-                banco.update("INSERT INTO maquina VALUES (?, ?, ?, ?, ?,?,?, ?, ?, ?)",
-                        null, "Triagem", sistema_Operacional, fabricante, nome_Processador, Conversor.formatarBytes(processador.getFrequencia()), Conversor.formatarBytes(memoria.getTotal()),
-                        Conversor.formatarBytes(itemDisco.getTamanho()), numero_CPU_fisica, "1");
-            }
-            break;
-        }
         
-        //MAQUINA 4
-        for (Disco itemDisco : discos) {
-            for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
-                banco.update("INSERT INTO maquina VALUES (?, ?, ?,?, ?, ?, ?, ?, ?, ?)",
-                        null, "Triagem", sistema_Operacional, fabricante, nome_Processador,Conversor.formatarBytes(processador.getFrequencia()),
-                        Conversor.formatarBytes(memoria.getTotal()), Conversor.formatarBytes(itemDisco.getTamanho()), numero_CPU_fisica, "2");
-            }
-            break;
-        }
 
 
         //ADICIONANDO NA LISTAMAQUINAS O SELECT DA TABELA

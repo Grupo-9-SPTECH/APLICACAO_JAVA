@@ -86,7 +86,6 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         lblIdMaq01 = new javax.swing.JLabel();
@@ -105,45 +104,13 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         lblDataMaq01 = new javax.swing.JLabel();
         btnAtualizarMedidasMaq01 = new javax.swing.JButton();
-        lblDataMaq2 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        lblIdMaq2 = new javax.swing.JLabel();
-        lblAlaHospMaq2 = new javax.swing.JLabel();
-        lblUsoCpuMaq2 = new javax.swing.JLabel();
-        lblUsoProcessMaq2 = new javax.swing.JLabel();
-        lblUsoRamMaq2 = new javax.swing.JLabel();
-        lblLeitDiscoMaq2 = new javax.swing.JLabel();
-        btnAtualizarMedidasMaq2 = new javax.swing.JButton();
-        lblIdMaq4 = new javax.swing.JLabel();
-        lblAlaHospMaq3 = new javax.swing.JLabel();
-        lblIdMaq3 = new javax.swing.JLabel();
-        lblAlaHospMaq4 = new javax.swing.JLabel();
-        lblUsoMemoriaMaq2 = new javax.swing.JLabel();
-        lblUsoMemoriaMaq3 = new javax.swing.JLabel();
-        lblUsoCpuMaq3 = new javax.swing.JLabel();
-        lblUsoCpuMaq4 = new javax.swing.JLabel();
-        lblUsoMemoriaMaq4 = new javax.swing.JLabel();
-        lblUsoProcessMaq3 = new javax.swing.JLabel();
-        lblUsoProcessMaq4 = new javax.swing.JLabel();
-        lblUsoRamMaq3 = new javax.swing.JLabel();
-        lblUsoRamMaq4 = new javax.swing.JLabel();
-        lblLeitDiscoMaq3 = new javax.swing.JLabel();
-        lblLeitDiscoMaq4 = new javax.swing.JLabel();
-        lblDataMaq3 = new javax.swing.JLabel();
-        lblDataMaq4 = new javax.swing.JLabel();
-        btnAtualizarMedidasMaq3 = new javax.swing.JButton();
-        btnAtualizarMedidasMaq4 = new javax.swing.JButton();
         btnVerInfMaq = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel1.setText("Medidas das Maquinas");
-
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel2.setText("Máquina 1");
+        jLabel2.setText("Medidas da Máquina");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setText("ID da Máquina:");
@@ -192,84 +159,6 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
             }
         });
 
-        lblDataMaq2.setText("-----");
-
-        jLabel11.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel11.setText("Máquina 2");
-
-        jLabel12.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel12.setText("Máquina 3");
-
-        jLabel13.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel13.setText("Máquina 4");
-
-        lblIdMaq2.setText("-----");
-
-        lblAlaHospMaq2.setText("-----");
-
-        lblUsoCpuMaq2.setText("-----");
-
-        lblUsoProcessMaq2.setText("-----");
-
-        lblUsoRamMaq2.setText("-----");
-
-        lblLeitDiscoMaq2.setText("-----");
-
-        btnAtualizarMedidasMaq2.setText("Atualizar Medidas");
-        btnAtualizarMedidasMaq2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAtualizarMedidasMaq2ActionPerformed(evt);
-            }
-        });
-
-        lblIdMaq4.setText("-----");
-
-        lblAlaHospMaq3.setText("-----");
-
-        lblIdMaq3.setText("-----");
-
-        lblAlaHospMaq4.setText("-----");
-
-        lblUsoMemoriaMaq2.setText("-----");
-
-        lblUsoMemoriaMaq3.setText("-----");
-
-        lblUsoCpuMaq3.setText("-----");
-
-        lblUsoCpuMaq4.setText("-----");
-
-        lblUsoMemoriaMaq4.setText("-----");
-
-        lblUsoProcessMaq3.setText("-----");
-
-        lblUsoProcessMaq4.setText("-----");
-
-        lblUsoRamMaq3.setText("-----");
-
-        lblUsoRamMaq4.setText("-----");
-
-        lblLeitDiscoMaq3.setText("-----");
-
-        lblLeitDiscoMaq4.setText("-----");
-
-        lblDataMaq3.setText("-----");
-
-        lblDataMaq4.setText("-----");
-
-        btnAtualizarMedidasMaq3.setText("Atualizar Medidas");
-        btnAtualizarMedidasMaq3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAtualizarMedidasMaq3ActionPerformed(evt);
-            }
-        });
-
-        btnAtualizarMedidasMaq4.setText("Atualizar Medidas");
-        btnAtualizarMedidasMaq4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAtualizarMedidasMaq4ActionPerformed(evt);
-            }
-        });
-
         btnVerInfMaq.setText("Ver Informações das Máquinas");
         btnVerInfMaq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -282,217 +171,84 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(190, 190, 190)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(240, 240, 240)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblIdMaq3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(247, 247, 247)
-                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(306, 306, 306)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblUsoMemoriaMaq4, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblAlaHospMaq4, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblUsoMemoriaMaq2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblAlaHospMaq2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblAlaHospMaq3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblUsoMemoriaMaq3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(306, 306, 306)))
-                .addGap(98, 98, 98))
+                .addGap(625, 625, 625)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(41, 41, 41)
-                        .addComponent(lblUsoProcessMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblUsoProcessMaq2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(lblUsoCpuMaq2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblDataMaq2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                            .addComponent(jLabel5)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(lblUsoMemoriaMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel3)
-                                                .addComponent(jLabel4))
-                                            .addGap(77, 77, 77)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(lblIdMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(lblAlaHospMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jLabel6)
-                                        .addGap(36, 36, 36)
-                                        .addComponent(lblUsoCpuMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel8)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblUsoRamMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(177, 177, 177)
-                                        .addComponent(lblIdMaq2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(131, 131, 131)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btnAtualizarMedidasMaq2)
-                                            .addComponent(lblUsoRamMaq2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addGap(47, 47, 47)
-                                .addComponent(lblLeitDiscoMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(btnAtualizarMedidasMaq01)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel10)
-                                    .addGap(58, 58, 58)
-                                    .addComponent(lblDataMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(220, 220, 220)
-                        .addComponent(lblLeitDiscoMaq2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)))
+                .addContainerGap(511, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(542, 542, 542)
-                        .addComponent(lblIdMaq4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(116, 116, 116))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblUsoProcessMaq3, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblUsoCpuMaq3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblUsoRamMaq3, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnAtualizarMedidasMaq3))
-                                .addGap(183, 183, 183)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblUsoCpuMaq4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblUsoProcessMaq4, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblUsoRamMaq4, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap())
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btnAtualizarMedidasMaq4)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(lblDataMaq3, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(lblLeitDiscoMaq3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(251, 251, 251)
-                                                .addComponent(lblLeitDiscoMaq4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(200, 200, 200)
-                                                .addComponent(lblDataMaq4, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addGap(79, 79, 79))))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel3)
+                                .addGap(95, 95, 95))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel10))
+                                .addGap(18, 18, 18)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblAlaHospMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblIdMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblUsoMemoriaMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblUsoCpuMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblDataMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblLeitDiscoMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblUsoProcessMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblUsoRamMaq01, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(547, 547, 547))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(580, 580, 580))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnAtualizarMedidasMaq01)
+                        .addGap(144, 144, 144)
                         .addComponent(btnVerInfMaq)
-                        .addGap(559, 559, 559))))
+                        .addGap(291, 291, 291))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel13))
-                .addGap(22, 22, 22)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(lblIdMaq01)
-                    .addComponent(lblIdMaq2)
-                    .addComponent(lblIdMaq4)
-                    .addComponent(lblIdMaq3))
+                    .addComponent(lblIdMaq01))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(lblAlaHospMaq01)
-                    .addComponent(lblAlaHospMaq2)
-                    .addComponent(lblAlaHospMaq3)
-                    .addComponent(lblAlaHospMaq4))
+                    .addComponent(lblAlaHospMaq01))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(lblUsoMemoriaMaq01)
-                    .addComponent(lblUsoMemoriaMaq2)
-                    .addComponent(lblUsoMemoriaMaq3)
-                    .addComponent(lblUsoMemoriaMaq4))
+                    .addComponent(lblUsoMemoriaMaq01))
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
                     .addComponent(lblUsoCpuMaq01)
-                    .addComponent(lblUsoCpuMaq2)
-                    .addComponent(lblUsoCpuMaq3)
-                    .addComponent(lblUsoCpuMaq4))
-                .addGap(35, 35, 35)
+                    .addComponent(jLabel6))
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(lblUsoProcessMaq01)
-                    .addComponent(lblUsoProcessMaq2)
-                    .addComponent(lblUsoProcessMaq3)
-                    .addComponent(lblUsoProcessMaq4))
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(lblUsoRamMaq01)
-                    .addComponent(lblUsoRamMaq2)
-                    .addComponent(lblUsoRamMaq3)
-                    .addComponent(lblUsoRamMaq4))
+                    .addComponent(lblUsoProcessMaq01))
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(lblUsoRamMaq01))
+                .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(lblLeitDiscoMaq01)
-                    .addComponent(lblLeitDiscoMaq2)
-                    .addComponent(lblLeitDiscoMaq3)
-                    .addComponent(lblLeitDiscoMaq4))
-                .addGap(33, 33, 33)
+                    .addComponent(lblLeitDiscoMaq01))
+                .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(lblDataMaq01)
-                    .addComponent(lblDataMaq2)
-                    .addComponent(lblDataMaq3)
-                    .addComponent(lblDataMaq4))
-                .addGap(47, 47, 47)
+                    .addComponent(lblDataMaq01))
+                .addGap(73, 73, 73)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAtualizarMedidasMaq01)
-                    .addComponent(btnAtualizarMedidasMaq2)
-                    .addComponent(btnAtualizarMedidasMaq3)
-                    .addComponent(btnAtualizarMedidasMaq4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                .addComponent(btnVerInfMaq)
-                .addGap(93, 93, 93))
+                    .addComponent(btnVerInfMaq))
+                .addContainerGap(151, Short.MAX_VALUE))
         );
 
         pack();
@@ -547,156 +303,13 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
         lblIdMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getIdMaquina().toString());
         lblAlaHospMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getAla_Hospitalar());
         lblUsoMemoriaMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getMemoria_Em_Uso());
-        lblUsoCpuMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getPercent_Uso_Cpu_Processo().toString());
-        lblUsoProcessMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getPercent_Uso_Processador().toString());
-        lblUsoRamMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getPercent_Uso_Ram_Processo().toString());
+        lblUsoCpuMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getPercent_Uso_Cpu_Processo().toString()  + "%");
+        lblUsoProcessMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getPercent_Uso_Processador().toString()  + "%");
+        lblUsoRamMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getPercent_Uso_Ram_Processo().toString()  + "%");
         lblLeitDiscoMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getNumero_Leituras_Disco());
         lblDataMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getMomento());
 
     }//GEN-LAST:event_btnAtualizarMedidasMaq01ActionPerformed
-
-    // MAQUINA 2
-    private void btnAtualizarMedidasMaq2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarMedidasMaq2ActionPerformed
-        //CRIANDO VARIAVEIS PRA PEGAR AS MEDIDAS
-        //Long memoria_Em_Uso = Conversor.formatarBytes(memoria.getEmUso()); -------- PS: essa foi direto no insert       
-        Double percent_Uso_Processador = processador.getUso();
-        //Double percent_Uso_Ram_Processo = processo.getUsoMemoria();
-        //Long numero_Leituras_Disco = disco.getLeituras();
-
-        //INSERINDO VALORES NA TABELA
-        for (Processo itemProcesso : processos) {
-            Double percent_Uso_Cpu_Processo = itemProcesso.getUsoCpu();
-            Double percent_Uso_Ram_Processo = itemProcesso.getUsoMemoria();
-            for (int cont = (processos.size() - 1); cont < processos.size(); cont++) {
-                for (Disco itemDisco : discos) {
-                    for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
-                        Date dataHoraAtual = new Date();
-                        String novaData = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
-                        String novaHora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
-                        String novoMomento = novaData + novaHora;
-                        banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)", null,
-                                Conversor.formatarBytes(memoria.getEmUso()),
-                                percent_Uso_Cpu_Processo,
-                                percent_Uso_Processador, percent_Uso_Ram_Processo,
-                                Conversor.formatarBytes(itemDisco.getLeituras()), novoMomento, "2");
-                    }
-                }
-            }
-            break;
-        }
-
-        //MAQUINA 02
-        Medida med2 = new Medida();
-        List<Medida> listaMedidaMaq2 = banco.query("select idMedida, maquina.idMaquina, maquina.ala_Hospitalar, memoria_Em_Uso,"
-                + "percent_Uso_Cpu_Processo, percent_Uso_Processador, percent_Uso_Ram_Processo,"
-                + "numero_Leituras_Disco, momento from medida right join maquina "
-                + "on medida.fkMaquina = maquina.idMaquina"
-                + " where maquina.idMaquina = 2;", new BeanPropertyRowMapper(Medida.class));
-
-        lblIdMaq2.setText(listaMedidaMaq2.get(listaMedidaMaq2.size() - 1).getIdMaquina().toString());
-        lblAlaHospMaq2.setText(listaMedidaMaq2.get(listaMedidaMaq2.size() - 1).getAla_Hospitalar());
-        lblUsoMemoriaMaq2.setText(listaMedidaMaq2.get(listaMedidaMaq2.size() - 1).getMemoria_Em_Uso());
-        lblUsoCpuMaq2.setText(listaMedidaMaq2.get(listaMedidaMaq2.size() - 1).getPercent_Uso_Cpu_Processo().toString());
-        lblUsoProcessMaq2.setText(listaMedidaMaq2.get(listaMedidaMaq2.size() - 1).getPercent_Uso_Processador().toString());
-        lblUsoRamMaq2.setText(listaMedidaMaq2.get(listaMedidaMaq2.size() - 1).getPercent_Uso_Ram_Processo().toString());
-        lblLeitDiscoMaq2.setText(listaMedidaMaq2.get(listaMedidaMaq2.size() - 1).getNumero_Leituras_Disco());
-        lblDataMaq2.setText(listaMedidaMaq2.get(listaMedidaMaq2.size() - 1).getMomento());
-    }//GEN-LAST:event_btnAtualizarMedidasMaq2ActionPerformed
-
-    //MAQUINA 3
-    private void btnAtualizarMedidasMaq3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarMedidasMaq3ActionPerformed
-        //CRIANDO VARIAVEIS PRA PEGAR AS MEDIDAS
-        //Long memoria_Em_Uso = Conversor.formatarBytes(memoria.getEmUso()); -------- PS: essa foi direto no insert       
-        Double percent_Uso_Processador = processador.getUso();
-        //Double percent_Uso_Ram_Processo = processo.getUsoMemoria();
-
-        //INSERINDO VALORES NA TABELA
-        for (Processo itemProcesso : processos) {
-            Double percent_Uso_Cpu_Processo = itemProcesso.getUsoCpu();
-            Double percent_Uso_Ram_Processo = itemProcesso.getUsoMemoria();
-            for (int cont = (processos.size() - 1); cont < processos.size(); cont++) {
-                for (Disco itemDisco : discos) {
-                    for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
-                        Date dataHoraAtual = new Date();
-                        String novaData = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
-                        String novaHora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
-                        String novoMomento = novaData + novaHora;
-                        banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)", null,
-                                Conversor.formatarBytes(memoria.getEmUso()),
-                                percent_Uso_Cpu_Processo,
-                                percent_Uso_Processador, percent_Uso_Ram_Processo,
-                                Conversor.formatarBytes(itemDisco.getLeituras()), novoMomento, "3");
-                    }
-                }
-            }
-            break;
-        }
-
-        //MAQUINA 03
-        Medida med3 = new Medida();
-        List<Medida> listaMedidaMaq3 = banco.query("select idMedida, maquina.idMaquina, maquina.ala_Hospitalar, memoria_Em_Uso,"
-                + "percent_Uso_Cpu_Processo, percent_Uso_Processador, percent_Uso_Ram_Processo,"
-                + "numero_Leituras_Disco, momento from medida right join maquina "
-                + "on medida.fkMaquina = maquina.idMaquina"
-                + " where maquina.idMaquina = 3;", new BeanPropertyRowMapper(Medida.class));
-
-        lblIdMaq3.setText(listaMedidaMaq3.get(listaMedidaMaq3.size() - 1).getIdMaquina().toString());
-        lblAlaHospMaq3.setText(listaMedidaMaq3.get(listaMedidaMaq3.size() - 1).getAla_Hospitalar());
-        lblUsoMemoriaMaq3.setText(listaMedidaMaq3.get(listaMedidaMaq3.size() - 1).getMemoria_Em_Uso());
-        lblUsoCpuMaq3.setText(listaMedidaMaq3.get(listaMedidaMaq3.size() - 1).getPercent_Uso_Cpu_Processo().toString());
-        lblUsoProcessMaq3.setText(listaMedidaMaq3.get(listaMedidaMaq3.size() - 1).getPercent_Uso_Processador().toString());
-        lblUsoRamMaq3.setText(listaMedidaMaq3.get(listaMedidaMaq3.size() - 1).getPercent_Uso_Ram_Processo().toString());
-        lblLeitDiscoMaq3.setText(listaMedidaMaq3.get(listaMedidaMaq3.size() - 1).getNumero_Leituras_Disco());
-        lblDataMaq3.setText(listaMedidaMaq3.get(listaMedidaMaq3.size() - 1).getMomento());
-    }//GEN-LAST:event_btnAtualizarMedidasMaq3ActionPerformed
-
-    //MAQUINA 4
-    private void btnAtualizarMedidasMaq4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarMedidasMaq4ActionPerformed
-        //CRIANDO VARIAVEIS PRA PEGAR AS MEDIDAS
-        //Long memoria_Em_Uso = Conversor.formatarBytes(memoria.getEmUso()); -------- PS: essa foi direto no insert       
-        Double percent_Uso_Processador = processador.getUso();
-        //Double percent_Uso_Ram_Processo = processo.getUsoMemoria();
-        //Long numero_Leituras_Disco = disco.getLeituras();
-
-        //INSERINDO VALORES NA TABELA
-        for (Processo itemProcesso : processos) {
-            Double percent_Uso_Cpu_Processo = itemProcesso.getUsoCpu();
-            Double percent_Uso_Ram_Processo = itemProcesso.getUsoMemoria();
-            for (int cont = (processos.size() - 1); cont < processos.size(); cont++) {
-                for (Disco itemDisco : discos) {
-                    for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
-                        Date dataHoraAtual = new Date();
-                        String novaData = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
-                        String novaHora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
-                        String novoMomento = novaData + novaHora;
-                        banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)", null,
-                                Conversor.formatarBytes(memoria.getEmUso()),
-                                percent_Uso_Cpu_Processo,
-                                percent_Uso_Processador, percent_Uso_Ram_Processo,
-                                Conversor.formatarBytes(itemDisco.getLeituras()), novoMomento, "4");
-                    }
-                }
-            }
-            break;
-        }
-
-        //MAQUINA 04
-        Medida med4 = new Medida();
-        List<Medida> listaMedidaMaq4 = banco.query("select idMedida, maquina.idMaquina, maquina.ala_Hospitalar, memoria_Em_Uso,"
-                + "percent_Uso_Cpu_Processo, percent_Uso_Processador, percent_Uso_Ram_Processo,"
-                + "numero_Leituras_Disco, momento from medida right join maquina "
-                + "on medida.fkMaquina = maquina.idMaquina"
-                + " where maquina.idMaquina = 4;", new BeanPropertyRowMapper(Medida.class));
-
-        lblIdMaq4.setText(listaMedidaMaq4.get(listaMedidaMaq4.size() - 1).getIdMaquina().toString());
-        lblAlaHospMaq4.setText(listaMedidaMaq4.get(listaMedidaMaq4.size() - 1).getAla_Hospitalar());
-        lblUsoMemoriaMaq4.setText(listaMedidaMaq4.get(listaMedidaMaq4.size() - 1).getMemoria_Em_Uso());
-        lblUsoCpuMaq4.setText(listaMedidaMaq4.get(listaMedidaMaq4.size() - 1).getPercent_Uso_Cpu_Processo().toString());
-        lblUsoProcessMaq4.setText(listaMedidaMaq4.get(listaMedidaMaq4.size() - 1).getPercent_Uso_Processador().toString());
-        lblUsoRamMaq4.setText(listaMedidaMaq4.get(listaMedidaMaq4.size() - 1).getPercent_Uso_Ram_Processo().toString());
-        lblLeitDiscoMaq4.setText(listaMedidaMaq4.get(listaMedidaMaq4.size() - 1).getNumero_Leituras_Disco());
-        lblDataMaq4.setText(listaMedidaMaq4.get(listaMedidaMaq4.size() - 1).getMomento());
-    }//GEN-LAST:event_btnAtualizarMedidasMaq4ActionPerformed
 
     private void btnVerInfMaqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerInfMaqActionPerformed
         TelaInfMaquina telaInf = new TelaInfMaquina();
@@ -740,15 +353,8 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtualizarMedidasMaq01;
-    private javax.swing.JButton btnAtualizarMedidasMaq2;
-    private javax.swing.JButton btnAtualizarMedidasMaq3;
-    private javax.swing.JButton btnAtualizarMedidasMaq4;
     private javax.swing.JButton btnVerInfMaq;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -758,36 +364,12 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel lblAlaHospMaq01;
-    private javax.swing.JLabel lblAlaHospMaq2;
-    private javax.swing.JLabel lblAlaHospMaq3;
-    private javax.swing.JLabel lblAlaHospMaq4;
     private javax.swing.JLabel lblDataMaq01;
-    private javax.swing.JLabel lblDataMaq2;
-    private javax.swing.JLabel lblDataMaq3;
-    private javax.swing.JLabel lblDataMaq4;
     private javax.swing.JLabel lblIdMaq01;
-    private javax.swing.JLabel lblIdMaq2;
-    private javax.swing.JLabel lblIdMaq3;
-    private javax.swing.JLabel lblIdMaq4;
     private javax.swing.JLabel lblLeitDiscoMaq01;
-    private javax.swing.JLabel lblLeitDiscoMaq2;
-    private javax.swing.JLabel lblLeitDiscoMaq3;
-    private javax.swing.JLabel lblLeitDiscoMaq4;
     private javax.swing.JLabel lblUsoCpuMaq01;
-    private javax.swing.JLabel lblUsoCpuMaq2;
-    private javax.swing.JLabel lblUsoCpuMaq3;
-    private javax.swing.JLabel lblUsoCpuMaq4;
     private javax.swing.JLabel lblUsoMemoriaMaq01;
-    private javax.swing.JLabel lblUsoMemoriaMaq2;
-    private javax.swing.JLabel lblUsoMemoriaMaq3;
-    private javax.swing.JLabel lblUsoMemoriaMaq4;
     private javax.swing.JLabel lblUsoProcessMaq01;
-    private javax.swing.JLabel lblUsoProcessMaq2;
-    private javax.swing.JLabel lblUsoProcessMaq3;
-    private javax.swing.JLabel lblUsoProcessMaq4;
     private javax.swing.JLabel lblUsoRamMaq01;
-    private javax.swing.JLabel lblUsoRamMaq2;
-    private javax.swing.JLabel lblUsoRamMaq3;
-    private javax.swing.JLabel lblUsoRamMaq4;
     // End of variables declaration//GEN-END:variables
 }

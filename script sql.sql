@@ -32,23 +32,18 @@ foreign key (fkHospital) references hospital(idHospital)
 );
 
 -- alter table maquina add column frequencia_Processador long after numero_CPU_fisica; 
--- alter table maquina modify column capacidadeTotalMemoria long; --
-
-desc maquina;
 
 CREATE TABLE medida (
 idMedida int primary key auto_increment,
 memoria_Em_Uso long, -- long memoria.getemuso
-percent_Uso_Cpu_Processo double, -- processo.getusocpu 
-percent_Uso_Processador double, -- double processador.getuso
-percent_Uso_Ram_Processo double, -- double processo.getUsoMemoria
+percent_Uso_Cpu_Processo decimal(5,2), -- processo.getusocpu 
+percent_Uso_Processador decimal(5,2), -- double processador.getuso
+percent_Uso_Ram_Processo float, -- double processo.getUsoMemoria
 numero_Leituras_Disco long, -- long disco.getleituras
 momento varchar (50), -- datetime default current_timestamp
 fkMaquina int,
 foreign key (fkMaquina) references maquina (idMaquina)
 );
-
--- alter table medida modify column momento datetime default current_timestamp; 
 
 -- alter table medida modify column momento varchar(50);
 
@@ -59,13 +54,15 @@ select * from medida;
 select Hospital.nome_Hospital, ala_Hospitalar, sistema_Operacional, fabricante, nome_Processador, frequencia_Processador, capacidade_Total_Memoria, tamanho_Disco, numero_CPU_fisica from maquina
 RIGHT join hospital on maquina.fkHospital = hospital.idHospital;
 
-select maquina.idMaquina, memoria_Em_Uso as "Uso da memoria", 
+select maquina.idMaquina, idMedida, memoria_Em_Uso as "Uso da memoria", 
 percent_Uso_Cpu_Processo as "%Uso da CPU no processo", percent_Uso_Processador as "%uso do Processador", percent_Uso_Ram_Processo as "%Uso da RAM no processo", 
 numero_Leituras_Disco as "Numero de leituras no disco", momento as "data" from medida right join maquina 
-on medida.fkMaquina = maquina.idMaquina;
+on medida.fkMaquina = maquina.idMaquina
+order by idMedida
+;
+
 
 truncate medida;
-
 -- caso de erro em algo
 drop table medida;
 drop table maquina;
