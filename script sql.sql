@@ -23,23 +23,23 @@ ala_Hospitalar varchar (45), -- inserir manualmente
 sistema_Operacional varchar (100), -- sistema.getSistema
 fabricante varchar (45), -- sistema.getfabricante
 nome_Processador varchar (100), -- processador get.nome
-frequencia_Processador long, -- frequencia do processador processador.getfrequencia
+frequencia_Processador varchar(45), -- frequencia do processador processador.getfrequencia
 capacidade_Total_Memoria varchar(45), -- memoria.gettotal
-tamanho_Disco long, -- long disco.gettamanho
+tamanho_Disco varchar(45), -- long disco.gettamanho
 numero_CPU_fisica int, -- processador.getnumeroscpusfisicas
 fkHospital int,
 foreign key (fkHospital) references hospital(idHospital)
 );
-
+ alter table medida modify column tamanho_Disco varchar(50);
 -- alter table maquina add column frequencia_Processador long after numero_CPU_fisica; 
 
 CREATE TABLE medida (
 idMedida int primary key auto_increment,
-memoria_Em_Uso long, -- long memoria.getemuso
+memoria_Em_Uso VARCHAR (45), -- long memoria.getemuso
 percent_Uso_Cpu_Processo decimal(5,2), -- processo.getusocpu 
 percent_Uso_Processador decimal(5,2), -- double processador.getuso
 percent_Uso_Ram_Processo float, -- double processo.getUsoMemoria
-numero_Leituras_Disco long, -- long disco.getleituras
+numero_Leituras_Disco varchar(45), -- long disco.getleituras
 momento varchar (50), -- datetime default current_timestamp
 fkMaquina int,
 foreign key (fkMaquina) references maquina (idMaquina)
