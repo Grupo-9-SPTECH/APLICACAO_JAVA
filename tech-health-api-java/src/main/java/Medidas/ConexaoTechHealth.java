@@ -12,11 +12,11 @@ import org.springframework.jdbc.core.JdbcTemplate;
  * @author rmsouza
  */
 public class ConexaoTechHealth {
-     private JdbcTemplate conexao;
 
+    private JdbcTemplate conexao;
 
     public ConexaoTechHealth() {
-        
+
         BasicDataSource datasource = new BasicDataSource();
 
         //conexao para h2
@@ -27,18 +27,26 @@ public class ConexaoTechHealth {
 //        datasource.setUsername("sa");
 //
 //        datasource.setPassword("");
-        
         //conexão para mysql worckbench
-        datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        
-        datasource.setUrl("jdbc:mysql://localhost:3306/grupo9?useTimezone=true&serverTimezone=UTC"); //grupo9 = meu database
-        
-        datasource.setUsername("root");
-        
-        datasource.setPassword("jujuba123");
-        
+//        datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+//
+//        datasource.setUrl("jdbc:mysql://localhost:3306/grupo9?useTimezone=true&serverTimezone=UTC"); //grupo9 = meu database
+//
+//        datasource.setUsername("root");
+//
+//        datasource.setPassword("jujuba123");
+
+        //conexao para sql servef
+        datasource.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
+        datasource.setUrl("jdbc:sqlserver://svr-tech-health.database.windows.net:1433;database=grupo9;encryp\n" +
+"t=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;");
+
+
+        datasource.setUsername("admin-tech-health");
+        datasource.setPassword("#Gfgrupo9");
+
         conexao = new JdbcTemplate(datasource);
-        
     }
 
     public JdbcTemplate getConexao() {

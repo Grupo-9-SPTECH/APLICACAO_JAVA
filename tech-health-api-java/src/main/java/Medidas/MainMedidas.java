@@ -54,8 +54,7 @@ public class MainMedidas {
         //Long numero_Leituras_Disco = disco.getLeituras();
 
         //INSERINDO VALORES NA TABELA
-        for (int i = 1; i <= 4; i++) {
-            Integer fkMaquina = i;
+        
             for (Processo itemProcesso : processos) {
                 Double percent_Uso_Cpu_Processo = itemProcesso.getUsoCpu();
                 Double percent_Uso_Ram_Processo = itemProcesso.getUsoMemoria();
@@ -65,17 +64,17 @@ public class MainMedidas {
                             String data = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
                             String hora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
                             String momento = data + hora;
-                            banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)", null,
+                            banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?)",
                                     Conversor.formatarBytes(memoria.getEmUso()),
                                     percent_Uso_Cpu_Processo,
                                     percent_Uso_Processador, percent_Uso_Ram_Processo,
-                                    Conversor.formatarBytes(itemDisco.getLeituras()), momento, fkMaquina);
+                                    Conversor.formatarBytes(itemDisco.getLeituras()), momento, 1);
                         }
                     }
                 }
                 break;
             }
-        }
+        
 
         System.out.println("MEDIDAS INSERIDAS");
 

@@ -58,8 +58,8 @@ public class MainComputador {
         //MAQUINA 1
         for (Disco itemDisco : discos) {
             for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
-                banco.update("INSERT INTO maquina VALUES (?, ?, ?,?, ?, ?, ?, ?, ?, ?)",
-                        null, "Recepção", sistema_Operacional, fabricante, nome_Processador, Conversor.formatarBytes(processador.getFrequencia()), Conversor.formatarBytes(memoria.getTotal()),
+                banco.update("INSERT INTO maquina VALUES (?, ?,?, ?, ?, ?, ?, ?, ?)",
+                        "Recepção", sistema_Operacional, fabricante, nome_Processador, Conversor.formatarBytes(processador.getFrequencia()), Conversor.formatarBytes(memoria.getTotal()),
                         Conversor.formatarBytes(itemDisco.getTamanho()), numero_CPU_fisica, "1");
             }
             break;

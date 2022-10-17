@@ -276,7 +276,7 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
                         String novaHora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
                         String novoMomento = novaData + novaHora;
 
-                        banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)", null,
+                        banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?)",
                                 Conversor.formatarBytes(memoria.getEmUso()),
                                 percent_Uso_Cpu_Processo,
                                 percent_Uso_Processador, percent_Uso_Ram_Processo,
