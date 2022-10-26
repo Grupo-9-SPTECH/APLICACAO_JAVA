@@ -35,16 +35,20 @@ public class ConexaoTechHealth {
 //        datasource.setUsername("root");
 //
 //        datasource.setPassword("jujuba123");
-
         //conexao para sql servef
         datasource.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
-        datasource.setUrl("jdbc:sqlserver://svr-tech-health.database.windows.net:1433;database=grupo9;encryp\n" +
-"t=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;");
-
+        datasource.setUrl("jdbc:sqlserver://svr-tech-health.database.windows.net:1433;database=grupo9;encryp\n"
+                + "t=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;");
 
         datasource.setUsername("admin-tech-health");
         datasource.setPassword("#Gfgrupo9");
+
+        //conexao docker
+        datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        datasource.setUrl("jdbc:mysql://localhost:3306/grupo9?autoReconnect=true&useSSL=false");
+        datasource.setUsername("root");
+        datasource.setPassword("urubu100");
 
         conexao = new JdbcTemplate(datasource);
     }

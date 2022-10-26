@@ -97,8 +97,6 @@ public class TelaInfMaquina extends javax.swing.JFrame {
         btnVerMedidas = new javax.swing.JButton();
         lblFreqProcessMaq01 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        lblNome = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -184,12 +182,6 @@ public class TelaInfMaquina extends javax.swing.JFrame {
         jLabel2.setText("     TECH HEALTH   ");
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel9.setText("Seja bem vindo(a)");
-
-        lblNome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblNome.setText("---");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -253,12 +245,7 @@ public class TelaInfMaquina extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(185, 185, 185)
                         .addComponent(lblHospital01, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel4)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblNome, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel4))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -271,11 +258,7 @@ public class TelaInfMaquina extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                 .addComponent(jLabel4)
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(lblNome))
-                .addGap(8, 8, 8)
+                .addGap(66, 66, 66)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(lblIdMaq01))
@@ -373,14 +356,12 @@ public class TelaInfMaquina extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel lblAlaMaq01;
     private javax.swing.JLabel lblFabricanMaq01;
     private javax.swing.JLabel lblFreqProcessMaq01;
     private javax.swing.JLabel lblHospital01;
     private javax.swing.JLabel lblIdMaq01;
     private javax.swing.JLabel lblNomProcessMaq01;
-    private javax.swing.JLabel lblNome;
     private javax.swing.JLabel lblNumCpuFisMaq01;
     private javax.swing.JLabel lblSist_OperMaq01;
     private javax.swing.JLabel lblTotDiscoMaq01;
