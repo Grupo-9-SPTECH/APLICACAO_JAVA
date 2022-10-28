@@ -48,7 +48,7 @@ public class TelaInfMaquina extends javax.swing.JFrame {
         
         //MAQUINA 1
         Computador comp1 = new Computador();
-        List<Computador> listaMaquina01 = banco.query("select idMaquina, Hospital.nome_Hospital, ala_Hospitalar, sistema_Operacional, fabricante, nome_Processador, "
+        List<Computador> listaMaquina01 = banco.query("select idMaquina, hospital.nome_Hospital, ala_Hospitalar, sistema_Operacional, fabricante, nome_Processador, "
                 + "frequencia_Processador, capacidade_Total_Memoria, tamanho_Disco, numero_CPU_fisica from maquina\n" +
         "right join hospital on maquina.fkHospital = hospital.idHospital where idMaquina = 1;", new BeanPropertyRowMapper(Computador.class));
         

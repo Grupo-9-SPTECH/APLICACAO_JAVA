@@ -1,5 +1,12 @@
 use grupo9;
-
+create table usuario (
+id int primary key auto_increment,
+nome varchar (45),
+cnpj varchar (45),
+email varchar (45),
+check (email like '%@%' and email like '%.com%'),
+senha varchar (45)
+);
 select email, senha from usuario;
 
 CREATE TABLE hospital (
@@ -51,15 +58,18 @@ select * from hospital;
 select * from maquina;
 select * from medida;
 
-select Hospital.nome_Hospital, ala_Hospitalar, sistema_Operacional, fabricante, nome_Processador, frequencia_Processador, capacidade_Total_Memoria, tamanho_Disco, numero_CPU_fisica from maquina
-RIGHT join hospital on maquina.fkHospital = hospital.idHospital;
-
+select hospital.nome_Hospital, ala_Hospitalar, sistema_Operacional, fabricante, nome_Processador, frequencia_Processador, capacidade_Total_Memoria, tamanho_Disco, numero_CPU_fisica from maquina
+left join hospital on maquina.fkHospital = hospital.idHospital;
+update maquina set ala_Hospitalar = "recepcao" where idMaquina = 1;
 select maquina.idMaquina, idMedida, memoria_Em_Uso as "Uso da memoria", 
 percent_Uso_Cpu_Processo as "%Uso da CPU no processo", percent_Uso_Processador as "%uso do Processador", percent_Uso_Ram_Processo as "%Uso da RAM no processo", 
 numero_Leituras_Disco as "Numero de leituras no disco", momento as "data" from medida right join maquina 
 on medida.fkMaquina = maquina.idMaquina
 order by idMedida
 ;
+
+insert into maquina values 
+(null, 'Recepcao', 'Windows', 'Microsoft', '11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz', '2,6 GiB', '15,7 GiB', '238,5 GiB', '4', '1');
 
 
 truncate medida;
