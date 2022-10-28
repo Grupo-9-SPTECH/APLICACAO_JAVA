@@ -324,7 +324,7 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
                         String novoMomento = novaData + novaHora;
 
                         banco.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?)",
-                                Conversor.formatarBytes(memoria.getEmUso()),
+                                null, Conversor.formatarBytes(memoria.getEmUso()),
                                 percent_Uso_Cpu_Processo,
                                 percent_Uso_Processador, percent_Uso_Ram_Processo,
                                 Conversor.formatarBytes(itemDisco.getLeituras()), novoMomento, "1");
