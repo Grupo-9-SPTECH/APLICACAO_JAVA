@@ -347,14 +347,14 @@ public class TelaMedidasMaquina extends javax.swing.JFrame {
 //            System.out.println(listaMedidaMaq01.get(i));
 //
 //        }
-        lblIdMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getIdMaquina().toString());
-        lblAlaHospMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getAla_Hospitalar());
-        lblUsoMemoriaMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getMemoria_Em_Uso());
-        lblUsoCpuMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getPercent_Uso_Cpu_Processo().toString());
-        lblUsoProcessMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getPercent_Uso_Processador().toString()  + "%");
-        lblUsoRamMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getPercent_Uso_Ram_Processo().toString()  + "%");
-        lblLeitDiscoMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getNumero_Leituras_Disco());
-        lblDataMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getMomento());
+//        lblIdMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getIdMaquina().toString());
+//        lblAlaHospMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getAla_Hospitalar());
+//        lblUsoMemoriaMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getMemoria_Em_Uso());
+//        lblUsoCpuMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getPercent_Uso_Cpu_Processo().toString());
+//        lblUsoProcessMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getPercent_Uso_Processador().toString()  + "%");
+//        lblUsoRamMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getPercent_Uso_Ram_Processo().toString()  + "%");
+//        lblLeitDiscoMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getNumero_Leituras_Disco());
+//        lblDataMaq01.setText(listaMedidaMaq01.get(listaMedidaMaq01.size() - 1).getMomento());
 
     }//GEN-LAST:event_btnAtualizarMedidasMaq01ActionPerformed
 

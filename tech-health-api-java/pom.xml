@@ -24,7 +24,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>Medidas.LoginSwing</mainClass> 
+                            <mainClass>Medidas.MainComputador</mainClass> 
                         </manifest>
                     </archive>
                 </configuration>

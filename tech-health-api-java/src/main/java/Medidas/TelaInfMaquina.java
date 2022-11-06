@@ -52,16 +52,16 @@ public class TelaInfMaquina extends javax.swing.JFrame {
                 + "frequencia_Processador, capacidade_Total_Memoria, tamanho_Disco, numero_CPU_fisica from maquina\n" +
         "right join hospital on maquina.fkHospital = hospital.idHospital where idMaquina = 1;", new BeanPropertyRowMapper(Computador.class));
         
-        lblIdMaq01.setText(listaMaquina01.get(0).getIdMaquina().toString());
-        lblAlaMaq01.setText(listaMaquina01.get(0).getAla_Hospitalar());
-        lblSist_OperMaq01.setText(listaMaquina01.get(0).getSistema_Operacional());
-        lblFabricanMaq01.setText(listaMaquina01.get(0).getFabricante());
-        lblNomProcessMaq01.setText(listaMaquina01.get(0).getNome_Processador());
-        lblFreqProcessMaq01.setText(listaMaquina01.get(0).getFrequencia_Processador());
-        lblTotMemoMaq01.setText(listaMaquina01.get(0).getCapacidade_Total_Memoria());
-        lblTotDiscoMaq01.setText(listaMaquina01.get(0).getTamanho_Disco());
-        lblNumCpuFisMaq01.setText(listaMaquina01.get(0).getNumero_CPU_fisica().toString());
-        
+//        lblIdMaq01.setText(listaMaquina01.get(0).getIdMaquina().toString());
+//        lblAlaMaq01.setText(listaMaquina01.get(0).getAla_Hospitalar());
+//        lblSist_OperMaq01.setText(listaMaquina01.get(0).getSistema_Operacional());
+//        lblFabricanMaq01.setText(listaMaquina01.get(0).getFabricante());
+//        lblNomProcessMaq01.setText(listaMaquina01.get(0).getNome_Processador());
+//        lblFreqProcessMaq01.setText(listaMaquina01.get(0).getFrequencia_Processador());
+//        lblTotMemoMaq01.setText(listaMaquina01.get(0).getCapacidade_Total_Memoria());
+//        lblTotDiscoMaq01.setText(listaMaquina01.get(0).getTamanho_Disco());
+//        lblNumCpuFisMaq01.setText(listaMaquina01.get(0).getNumero_CPU_fisica().toString());
+//        
        
     }
 

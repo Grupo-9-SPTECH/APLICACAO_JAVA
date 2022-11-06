@@ -21,9 +21,9 @@ public class Computador {
     private String sistema_Operacional;
     private String fabricante;
     private String nome_Processador;
-    private String frequencia_Processador;
-    private String capacidade_Total_Memoria;
-    private String tamanho_Disco;
+    private Double frequencia_Processador;
+    private Double capacidade_Total_Memoria;
+    private Double tamanho_Disco;
     private Integer numero_CPU_fisica;
     
     public Integer getIdMaquina() {
@@ -75,19 +75,19 @@ public class Computador {
         this.nome_Processador = nome_Processador;
     }
 
-    public String getCapacidade_Total_Memoria() {
+    public Double getCapacidade_Total_Memoria() {
         return capacidade_Total_Memoria;
     }
 
-    public void setCapacidade_Total_Memoria(String capacidade_Total_Memoria) {
+    public void setCapacidade_Total_Memoria(Double capacidade_Total_Memoria) {
         this.capacidade_Total_Memoria = capacidade_Total_Memoria;
     }
 
-    public String getTamanho_Disco() {
+    public Double getTamanho_Disco() {
         return tamanho_Disco;
     }
 
-    public void setTamanho_Disco(String tamanho_Disco) {
+    public void setTamanho_Disco(Double tamanho_Disco) {
         this.tamanho_Disco = tamanho_Disco;
     }
 
@@ -99,11 +99,11 @@ public class Computador {
         this.numero_CPU_fisica = numero_CPU_fisica;
     }
 
-    public String getFrequencia_Processador() {
+    public Double getFrequencia_Processador() {
         return frequencia_Processador;
     }
 
-    public void setFrequencia_Processador(String frequencia_Processador) {
+    public void setFrequencia_Processador(Double frequencia_Processador) {
         this.frequencia_Processador = frequencia_Processador;
     }
 
@@ -115,7 +115,7 @@ public class Computador {
         final StringBuilder sb = new StringBuilder();
         //StringBuilder stb = new StringBuilder();
         
-        sb.append("\nID do Hospital: ")
+        sb.append("\nID da Maquina: ")
                 .append(getIdMaquina())
                 .append("\n");
         
