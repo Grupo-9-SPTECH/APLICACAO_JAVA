@@ -16,6 +16,17 @@ public class Funcionario {
     private String cnpj;
     private String senha;
 
+//    public Funcionario(Integer id, String nome, String email, String cnpj, String senha) {
+//        this.id = id;
+//        this.nome = nome;
+//        this.email = email;
+//        this.cnpj = cnpj;
+//        this.senha = senha;
+//    }
+
+    public void getCheck(){
+        
+    }
     public Integer getId() {
         return id;
     }

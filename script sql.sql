@@ -1,4 +1,12 @@
 use grupo9;
+CREATE TABLE hospital (
+idHospital int primary key auto_increment,
+nome_Hospital varchar (45),
+cnpj varchar(45),
+endereco varchar (100),
+numeroHospital int,
+qtdMaquinas Int
+);
 create table usuario (
 id int primary key auto_increment,
 nome varchar (45),
@@ -9,14 +17,7 @@ senha varchar (45)
 );
 select email, senha from usuario;
 
-CREATE TABLE hospital (
-idHospital int primary key auto_increment,
-nome_Hospital varchar (45),
-cnpj varchar(45),
-endereco varchar (100),
-numeroHospital int,
-qtdMaquinas Int
-);
+
 
 insert into hospital values
 (null, "Santa Catarina", "59.546.515/0001-34", "Av. Paulista", 200, 10);
@@ -25,7 +26,7 @@ insert into hospital values
 (null, "Grajau", "18.601.672/0007-91", "Av. Belmira Marin", 982, 7);
 
 CREATE TABLE maquina (
-idMaquina int primary key auto_increment,
+idMaquina int primary key auto_increment, -- IDENTITY(1,1),
 ala_Hospitalar varchar (45), -- inserir manualmente
 sistema_Operacional varchar (100), -- sistema.getSistema
 fabricante varchar (45), -- sistema.getfabricante
@@ -40,7 +41,7 @@ foreign key (fkHospital) references hospital(idHospital)
 
 
 CREATE TABLE medida (
-idMedida int primary key auto_increment,
+idMedida int primary key auto_increment,  -- IDENTITY(1,1),
 percent_Memoria_Em_Uso decimal(5,2), -- long memoria.getemuso
 uso_Cpu_Processo decimal(5,2), -- processo.getusocpu 
 uso_Processador decimal(5,2), -- double processador.getuso

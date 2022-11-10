@@ -4,11 +4,27 @@
  */
 package Medidas;
 
+import com.github.britooo.looca.api.group.discos.Disco;
+import com.github.britooo.looca.api.group.discos.DiscoGrupo;
+import com.github.britooo.looca.api.group.memoria.Memoria;
+import com.github.britooo.looca.api.group.processador.Processador;
+import com.github.britooo.looca.api.group.processos.Processo;
+import com.github.britooo.looca.api.group.processos.ProcessoGrupo;
+import com.github.britooo.looca.api.util.Conversor;
+import java.util.List;
+
 /**
  *
  * @author rmsouza
  */
 public class Medida {
+
+    Memoria memoria = new Memoria();
+    Processador processador = new Processador();
+    Conversor conversor = new Conversor();
+
+    ProcessoGrupo grupoProcesso = new ProcessoGrupo();
+    List<Processo> processos = grupoProcesso.getProcessos();
 
     private Integer idMedida;
     private Integer idMaquina;
@@ -20,7 +36,62 @@ public class Medida {
     private Double percent_Uso_Disco;
     private String momento;
 
-    //get e set
+    public Double pegarPercent_Memoria() {
+        Double memoria_Em_Uso = Double.parseDouble(Conversor.formatarBytes(memoria.getEmUso()).replace("GiB", "").replaceAll(",", "."));
+        Double capacidade_Total_Memoria = Double.parseDouble(Conversor.formatarBytes(memoria.getTotal()).substring(0, 5).replaceAll(",", "."));
+        Double percent_Memoria_Em_Uso = (memoria_Em_Uso * 100) / capacidade_Total_Memoria;
+        return percent_Memoria_Em_Uso;
+    }
+
+    public Double pegarCPU_Processo() {
+        Double uso_Cpu_Processo = 0.0;
+        for (Processo itemProcesso : processos) {
+
+            for (int cont = (processos.size() - 1); cont < processos.size(); cont++) {
+                uso_Cpu_Processo = itemProcesso.getUsoCpu();
+            }
+            break;
+        }
+        return uso_Cpu_Processo;
+
+    }
+
+    public Double pegarUsoRAM() {
+        Double uso_Ram_Processo = 0.0;
+        for (Processo itemProcesso : processos) {
+
+            for (int cont = (processos.size() - 1); cont < processos.size(); cont++) {
+                uso_Ram_Processo = itemProcesso.getUsoMemoria() * 100000;
+            }
+            break;
+        }
+        return uso_Ram_Processo;
+    }
+
+//    public Double pegarPercentDisco() {
+//        //Double percent_Uso_Disco = 0.0; 
+//        String usoDiscoGb = "";
+//        String usoNumbersOnly = "";
+//        Double tamanho_Disco = 0.0;
+//        for (Disco itemDisco : discos) {
+//            for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
+//                usoDiscoGb = Conversor.formatarBytes(itemDisco.getBytesDeEscritas() + itemDisco.getBytesDeLeitura());
+//                usoNumbersOnly = usoDiscoGb.replace("GiB", "").replaceAll(",", ".");
+//                tamanho_Disco = Double.parseDouble(Conversor.formatarBytes(itemDisco.getTamanho()).substring(0, 5).replaceAll(",", "."));
+//                Double usoDisco = Double.parseDouble(usoNumbersOnly);
+//                Double percent_Uso_Disco = (usoDisco * 100) / tamanho_Disco;
+//            }
+//            break;
+//        }
+//        
+//        
+//        return percent_Uso_Disco;
+//    }
+
+    public Double pegarUsoProcessador() {
+        Double uso_Processador = processador.getUso() / 10;
+        return uso_Processador;
+    }
 
     public Integer getIdMedida() {
         return idMedida;
@@ -94,8 +165,6 @@ public class Medida {
         this.momento = momento;
     }
 
-    
-    
     @Override
     public String toString() {
 
@@ -105,7 +174,7 @@ public class Medida {
         sb.append("\nID da Medida: ")
                 .append(getIdMedida())
                 .append("\n");
-        
+
         sb.append("\nID da maquina: ")
                 .append(getIdMaquina())
                 .append("\n");
@@ -113,7 +182,7 @@ public class Medida {
         sb.append("Ala Hospitalar: ")
                 .append(getAla_Hospitalar())
                 .append("\n");
-        
+
         sb.append("Memoria em Uso: ")
                 .append(getPercent_Memoria_Em_Uso())
                 .append(" %")
@@ -122,7 +191,6 @@ public class Medida {
 //        sb.append("Frequencia do Processador:")
 //                .append(getFrequencia_Processador())
 //                .append("\n");
-
         sb.append("Uso da CPU no processo: ")
                 .append(getUso_Cpu_Processo())
                 .append("\n");
@@ -143,7 +211,7 @@ public class Medida {
         sb.append("Momento: ")
                 .append(getMomento())
                 .append("\n");
-        
+
         return sb.toString();
 
     }
