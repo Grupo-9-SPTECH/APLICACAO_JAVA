@@ -78,7 +78,7 @@ public class MainComputador {
             
         }
         else {
-            arq = new FileWriter("home\\ubuntu\\Desktop//maquina.txt");
+            arq = new FileWriter("/home/ubuntu/Desktop//maquina.txt");
             
             
         }
