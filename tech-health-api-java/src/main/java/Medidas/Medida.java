@@ -38,7 +38,7 @@ public class Medida {
 
     public Double pegarPercent_Memoria() {
         Double memoria_Em_Uso = Double.parseDouble(Conversor.formatarBytes(memoria.getEmUso()).replace("GiB", "").replaceAll(",", "."));
-        Double capacidade_Total_Memoria = Double.parseDouble(Conversor.formatarBytes(memoria.getTotal()).substring(0, 5).replaceAll(",", "."));
+        Double capacidade_Total_Memoria = Double.parseDouble(Conversor.formatarBytes(memoria.getTotal()).replace("GiB", "").replaceAll(",", "."));
         Double percent_Memoria_Em_Uso = (memoria_Em_Uso * 100) / capacidade_Total_Memoria;
         return percent_Memoria_Em_Uso;
     }

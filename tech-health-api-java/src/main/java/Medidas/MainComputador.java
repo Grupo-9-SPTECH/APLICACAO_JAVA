@@ -165,7 +165,7 @@ public class MainComputador {
                         String usoDiscoGb = Conversor.formatarBytes(itemDisco.getBytesDeEscritas() + itemDisco.getBytesDeLeitura());
                         String usoNumbersOnly = usoDiscoGb.replace("GiB", "").replaceAll(",", ".");
                         Double usoDisco = Double.parseDouble(usoNumbersOnly);
-                        Double tamanho_Disco = Double.parseDouble(Conversor.formatarBytes(itemDisco.getTamanho()).substring(0, 5).replaceAll(",", "."));
+                        Double tamanho_Disco = Double.parseDouble(Conversor.formatarBytes(itemDisco.getTamanho()).replace("GiB", "").replaceAll(",", "."));
                         Double percent_Uso_Disco = (usoDisco * 100) / tamanho_Disco;
 
                         banco.update("INSERT INTO medida VALUES ( ?, ?, ?, ?, ?, ?, ?)",
