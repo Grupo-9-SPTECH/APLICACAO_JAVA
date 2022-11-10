@@ -78,7 +78,8 @@ public class MainComputador {
             
         }
         else {
-            arq = new FileWriter("/Desktop//maquina.txt");
+            arq = new FileWriter("/Desktop/maquina.txt");
+            
             
         }
         
