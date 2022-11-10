@@ -78,7 +78,7 @@ public class MainComputador {
             
         }
         else {
-            arq = new FileWriter("home//maquina.txt");
+            arq = new FileWriter("Desktop//maquina.txt");
             
         }
         
@@ -141,9 +141,9 @@ public class MainComputador {
         }
 
         //INSERINDO MEDIDAS NA TABELA de 5 em 5 segundos
-        FileWriter arq2 = new FileWriter("C:\\Users\\Public//medida.txt");
-        PrintWriter gravarMedida = new PrintWriter(arq2);
-        gravarMedida.printf("+--Medida--+%n\n\n");
+        //FileWriter arq2 = new FileWriter("C:\\Users\\Public//medida.txt");
+        //PrintWriter gravarMedida = new PrintWriter(arq2);
+        //gravarMedida.printf("+--Medida--+%n\n\n");
 
         new Timer().scheduleAtFixedRate(new TimerTask() {
 
@@ -198,7 +198,7 @@ public class MainComputador {
 //                        percent_Uso_Disco, momento
 //                );
 
-                gravarMedida.printf("+-------------+%n\n");
+                //gravarMedida.printf("+-------------+%n\n");
 
                 //System.out.println("maquina gravada");
                 System.out.println("MEDIDAS INSERIDAS");
@@ -216,6 +216,6 @@ public class MainComputador {
 
             }
         }, 0, 5000);
-        arq2.close();
+        //arq2.close();
     }
 }
