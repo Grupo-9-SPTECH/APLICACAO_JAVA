@@ -31,9 +31,9 @@ ala_Hospitalar varchar (45), -- inserir manualmente
 sistema_Operacional varchar (100), -- sistema.getSistema
 fabricante varchar (45), -- sistema.getfabricante
 nome_Processador varchar (100), -- processador get.nome
-frequencia_Processador decimal (5,2), -- frequencia do processador processador.getfrequencia
-capacidade_Total_Memoria decimal(5,2), -- memoria.gettotal
-tamanho_Disco decimal(5,2), -- long disco.gettamanho
+frequencia_Processador decimal (10,2), -- frequencia do processador processador.getfrequencia
+capacidade_Total_Memoria decimal(10,2), -- memoria.gettotal
+tamanho_Disco decimal(10,2), -- long disco.gettamanho
 numero_CPU_fisica int, -- processador.getnumeroscpusfisicas
 fkHospital int,
 foreign key (fkHospital) references hospital(idHospital)
@@ -42,11 +42,11 @@ foreign key (fkHospital) references hospital(idHospital)
 
 CREATE TABLE medida (
 idMedida int primary key auto_increment,  -- IDENTITY(1,1),
-percent_Memoria_Em_Uso decimal(5,2), -- long memoria.getemuso
-uso_Cpu_Processo decimal(5,2), -- processo.getusocpu 
-uso_Processador decimal(5,2), -- double processador.getuso
-uso_Ram_Processo decimal(5,2), -- double processo.getUsoMemoria
-percent_Uso_Disco decimal(5,2), -- long disco.getleituras
+percent_Memoria_Em_Uso decimal(10,2), -- long memoria.getemuso
+uso_Cpu_Processo decimal(10,2), -- processo.getusocpu 
+uso_Processador decimal(10,2), -- double processador.getuso
+uso_Ram_Processo decimal(10,2), -- double processo.getUsoMemoria
+percent_Uso_Disco decimal(10,2), -- long disco.getleituras
 momento varchar (50), -- datetime default current_timestamp
 fkMaquina int,
 foreign key (fkMaquina) references maquina (idMaquina)
