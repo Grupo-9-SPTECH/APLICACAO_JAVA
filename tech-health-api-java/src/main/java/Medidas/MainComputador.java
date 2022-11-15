@@ -32,6 +32,11 @@ public class MainComputador {
         //CONEXAO BANCO
         ConexaoTechHealth connection = new ConexaoTechHealth();
         JdbcTemplate banco = connection.getConexao();
+        
+        //vm
+        ConexaoDocker connection2 = new ConexaoDocker();
+        JdbcTemplate bancoVM = connection2.getConexao();
+        
         JSONObject json = new JSONObject();
         
         //instanciando a classe funcionario
@@ -95,8 +100,13 @@ public class MainComputador {
         String alaHospitalar = leitor3.nextLine();
 
         //CADASTRO DA MAQUINA NO BANCO
+        //azure
         banco.update("INSERT INTO maquina VALUES (?, ?,?, ?, ?, ?, ?, ?, ?)",
                 alaHospitalar, comp.pegarNomeSistemaOperacional(), comp.pegarNomeFabricante(), comp.pegarNome_Processador(),
+                comp.pegarFrequencia(), comp.pegarMemoria_Total(), comp.pegarTamanho_Disco(), comp.pegarNumero_CPU_fisica(), "1");
+        
+        bancoVM.update("INSERT INTO maquina VALUES (?, ?, ?,?, ?, ?, ?, ?, ?, ?)",
+                null, alaHospitalar, comp.pegarNomeSistemaOperacional(), comp.pegarNomeFabricante(), comp.pegarNome_Processador(),
                 comp.pegarFrequencia(), comp.pegarMemoria_Total(), comp.pegarTamanho_Disco(), comp.pegarNumero_CPU_fisica(), "1");
 
         System.out.println("Maquina Inserida");
@@ -178,6 +188,11 @@ public class MainComputador {
 
                         banco.update("INSERT INTO medida VALUES ( ?, ?, ?, ?, ?, ?, ?)",
                                 medida.pegarPercent_Memoria(), medida.pegarCPU_Processo(),
+                                medida.pegarUsoProcessador(), medida.pegarUsoRAM(),
+                                percent_Uso_Disco, momento, fkComp);
+                        
+                        bancoVM.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                                null, medida.pegarPercent_Memoria(), medida.pegarCPU_Processo(),
                                 medida.pegarUsoProcessador(), medida.pegarUsoRAM(),
                                 percent_Uso_Disco, momento, fkComp);
                         

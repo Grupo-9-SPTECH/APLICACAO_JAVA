@@ -60,6 +60,7 @@
             <artifactId>commons-dbcp2</artifactId>
             <version>2.5.0</version>
         </dependency>
+        
         <!-- Driver do servidor de banco H2 -->
         <dependency>
             <groupId>com.h2database</groupId>
@@ -73,6 +74,7 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.22</version>
         </dependency>
+        
         <!-- SQL Server -->
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
@@ -81,6 +83,7 @@
             <!-- ou versão 7.2.2.jre11, se sua JDK for a 11 -->
             <!-- ou versão que já existir na .m2 local -->
         </dependency>
+        
         <!-- https://mvnrepository.com/artifact/org.json/json -->
         <dependency>
             <groupId>org.json</groupId>

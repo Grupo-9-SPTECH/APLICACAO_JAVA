@@ -178,7 +178,7 @@ public class Computador {
                 .append(getAla_Hospitalar())
                 .append("\n");
 
-        sb.append("Sistema Operacional:")
+        sb.append("Sistema Operacional: ")
                 .append(getSistema_Operacional())
                 .append("\n");
 
@@ -186,20 +186,22 @@ public class Computador {
                 .append(getFabricante())
                 .append("\n");
 
-        sb.append("Nome do Processador:")
+        sb.append("Nome do Processador: ")
                 .append(getNome_Processador())
                 .append("\n");
 
-        sb.append("Frequencia do Processador:")
+        sb.append("Frequencia do Processador: ")
                 .append(getFrequencia_Processador())
                 .append("\n");
 
-        sb.append("Capacidade Total da Memoria:")
+        sb.append("Capacidade Total da Memoria: ")
                 .append(getCapacidade_Total_Memoria())
+                .append(" GiB")
                 .append("\n");
 
         sb.append("Tamanho do Disco: ")
                 .append(getTamanho_Disco())
+                .append(" GiB")
                 .append("\n");
 
         sb.append("Numero de CPUs fisicas: ")

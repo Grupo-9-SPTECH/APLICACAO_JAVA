@@ -30,6 +30,7 @@
 Medidas
 'C:/Users/rmsouza/OneDrive - Grupo VR/Documentos/NetBeansProjects/tech-health-api-java/src/main/java/ConexaoTechHealth.java'
 'C:/Users/rmsouza/OneDrive - Grupo VR/Documentos/NetBeansProjects/tech-health-api-java/src/main/java/Medidas/Computador.java'
+'C:/Users/rmsouza/OneDrive - Grupo VR/Documentos/NetBeansProjects/tech-health-api-java/src/main/java/Medidas/ConexaoDocker.java'
 'C:/Users/rmsouza/OneDrive - Grupo VR/Documentos/NetBeansProjects/tech-health-api-java/src/main/java/Medidas/ConexaoTechHealth.java'
 'C:/Users/rmsouza/OneDrive - Grupo VR/Documentos/NetBeansProjects/tech-health-api-java/src/main/java/Medidas/Funcionario.java'
 'C:/Users/rmsouza/OneDrive - Grupo VR/Documentos/NetBeansProjects/tech-health-api-java/src/main/java/Medidas/LoginSwing.java'
@@ -67,28 +68,28 @@ C:\Users\rmsouza\.m2\repository\com\microsoft\sqlserver\mssql-jdbc\7.2.2.jre11\m
 C:\Users\rmsouza\.m2\repository\org\json\json\20220924\json-20220924.jar = 1668023292032
 C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\src\main\java\ConexaoTechHealth.java = 1665086083766
 C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\src\main\java = 1665596258419
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\allclasses-index.html = 1668524396988
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\allclasses.html = 1668524397002
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\allpackages-index.html = 1668524396993
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\ConexaoTechHealth.html = 1668524396660
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\constant-values.html = 1668524396875
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\deprecated-list.html = 1668524396999
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\element-list = 1668524396850
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\help-doc.html = 1668524397012
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\index-all.html = 1668524396982
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\index.html = 1668524397006
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\member-search-index.js = 1668524396977
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\member-search-index.zip = 1668524396980
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\overview-summary.html = 1668524397008
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\overview-tree.html = 1668524396950
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\package-search-index.js = 1668524396968
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\package-search-index.zip = 1668524396971
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\package-summary.html = 1668524396853
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\package-tree.html = 1668524396861
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\package-use.html = 1668524396941
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\script.js = 1668524397025
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\search.js = 1668524397034
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\serialized-form.html = 1668524396890
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\stylesheet.css = 1668524397017
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\type-search-index.js = 1668524396973
-C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\type-search-index.zip = 1668524396975
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\allclasses-index.html = 1668530994151
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\allclasses.html = 1668530994159
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\allpackages-index.html = 1668530994151
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\ConexaoTechHealth.html = 1668530993751
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\constant-values.html = 1668530994039
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\deprecated-list.html = 1668530994159
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\element-list = 1668530993999
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\help-doc.html = 1668530994167
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\index-all.html = 1668530994143
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\index.html = 1668530994167
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\member-search-index.js = 1668530994143
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\member-search-index.zip = 1668530994143
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\overview-summary.html = 1668530994167
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\overview-tree.html = 1668530994111
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\package-search-index.js = 1668530994135
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\package-search-index.zip = 1668530994135
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\package-summary.html = 1668530994007
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\package-tree.html = 1668530994023
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\package-use.html = 1668530994103
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\script.js = 1668530994175
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\search.js = 1668530994175
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\serialized-form.html = 1668530994055
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\stylesheet.css = 1668530994175
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\type-search-index.js = 1668530994135
+C:\Users\rmsouza\OneDrive - Grupo VR\Documentos\NetBeansProjects\tech-health-api-java\target\apidocs\type-search-index.zip = 1668530994143
