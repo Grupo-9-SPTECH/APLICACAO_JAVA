@@ -162,8 +162,16 @@ public class MainComputador {
 
                 for (Disco itemDisco : discos) {
                     for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
+                        
                         String usoDiscoGb = Conversor.formatarBytes(itemDisco.getBytesDeEscritas() + itemDisco.getBytesDeLeitura());
-                        String usoNumbersOnly = usoDiscoGb.replace("GiB", "").replaceAll(",", ".");
+                        String usoNumbersOnly = "";
+                        if (Conversor.formatarBytes(itemDisco.getBytesDeEscritas() + itemDisco.getBytesDeLeitura()).contains("GiB")) {
+                            usoNumbersOnly = usoDiscoGb.replace("GiB", "").replaceAll(",", ".");
+                        }
+                        if (Conversor.formatarBytes(itemDisco.getBytesDeEscritas() + itemDisco.getBytesDeLeitura()).contains("MiB")) {
+                            usoNumbersOnly = usoDiscoGb.replace("MiB", "").replaceAll(",", ".");
+                        }
+                        
                         Double usoDisco = Double.parseDouble(usoNumbersOnly);
                         Double tamanho_Disco = Double.parseDouble(Conversor.formatarBytes(itemDisco.getTamanho()).replace("GiB", "").replaceAll(",", "."));
                         Double percent_Uso_Disco = (usoDisco * 100) / tamanho_Disco;
@@ -175,8 +183,8 @@ public class MainComputador {
                         
                         if (medida.pegarPercent_Memoria() > 70.0){
                                 json.put("text", "ID da máquina: " + listaMaquinas.size()
-                                        + "\nMemoria acima do limite\n" + 
-                                         "Memoria: " + medida.pegarPercent_Memoria() + 
+                                        + "\nMemoria acima do limite" + 
+                                         "\nMemoria: " + medida.pegarPercent_Memoria() + 
                                         "\nMomento: " + momento);
                             }
                         
