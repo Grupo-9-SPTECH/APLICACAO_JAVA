@@ -27,6 +27,7 @@ public class ConexaoTechHealth {
 //        datasource.setUsername("sa");
 //
 //        datasource.setPassword("");
+
         //conexão para mysql worckbench
 //        datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 //
@@ -43,13 +44,12 @@ public class ConexaoTechHealth {
                 + "t=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;");
 
         datasource.setUsername("admin-tech-health");
-        datasource.setPassword("#Gfgrupo9");
-
-        //conexao docker
-//        datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-//        datasource.setUrl("jdbc:mysql://localhost:3306/grupo9?autoReconnect=true&useSSL=false");
-//        datasource.setUsername("root");
-//        datasource.setPassword("urubu100");
+        datasource.setPassword("#setDriverClassName(\"com.microsoft.sqlserver.jdbc.SQLServerDriver\");\n" +
+"\n" +
+"        datasource.setUrl(\"jdbc:sqlserver://svr-tech-health.database.windows.net:1433;database=grupo9;encryp\\n\"\n" +
+"                + \"t=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;\");\n" +
+"\n" +
+"        datasource.setUsername(\"adGfgrupo9");
 
         conexao = new JdbcTemplate(datasource);
     }
