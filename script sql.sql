@@ -15,7 +15,6 @@ email varchar (45),
 check (email like '%@%' and email like '%.com%'),
 senha varchar (45)
 );
-select email, senha from usuario;
 
 
 
@@ -51,36 +50,3 @@ momento varchar (50), -- datetime default current_timestamp
 fkMaquina int,
 foreign key (fkMaquina) references maquina (idMaquina)
 );
-
-
--- alter table medida modify column memoria_Em_Uso decimal(5,2);
-
-select * from hospital;
-select * from maquina;
-select * from medida;
-
-select hospital.nome_Hospital, ala_Hospitalar, sistema_Operacional, fabricante, nome_Processador, frequencia_Processador, capacidade_Total_Memoria, tamanho_Disco, numero_CPU_fisica from maquina
-left join hospital on maquina.fkHospital = hospital.idHospital;
-update maquina set ala_Hospitalar = "recepcao" where idMaquina = 1;
-
-select maquina.idMaquina, idMedida, maquina.ala_Hospitalar, percent_Memoria_Em_Uso, 
-uso_Cpu_Processo, uso_Processador, uso_Ram_Processo, 
-percent_Uso_Disco, momento  from medida left join maquina 
-on medida.fkMaquina = maquina.idMaquina
-where fkMaquina = 1
-group by idMedida, momento
-order by idMedida desc;
-
-select convert(medida.memoria_Em_Uso, decimal(3,1)),cast(medida.memoria_Em_Uso as decimal(3,1)),medida.memoria_Em_Uso,  maquina.capacidade_Total_Memoria from medida join maquina 
-on medida.fkMaquina = maquina.idMaquina;
--- TO_NUMBER(REPLACE(LINHA1, ‘,’,’.’), ‘9999.99’)
-select idMedida, convert(replace(medida.memoria_Em_Uso, ',','.'), decimal(3,1)), medida.memoria_Em_Uso, maquina.capacidade_Total_Memoria from medida join maquina 
-on medida.fkMaquina = maquina.idMaquina
-order by idMedida desc;
-
-desc medida;
-truncate medida;
--- caso de erro em algo
-drop table medida;
-drop table maquina;
-drop TABLE HOSPITAL;

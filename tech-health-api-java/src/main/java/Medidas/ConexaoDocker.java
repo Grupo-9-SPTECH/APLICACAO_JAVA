@@ -1,8 +1,10 @@
+package Medidas;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Medidas;
+
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -20,7 +22,7 @@ public class ConexaoDocker {
 
         //conexao docker
         datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        datasource.setUrl("jdbc:mysql://localhost:3306/grupo9?useTimezone=true&serverTimezone=UTC"); 
+        datasource.setUrl("jdbc:mysql://localhost:3306/grupo9?autoReconnect=true&useSSL=false"); 
         datasource.setUsername("root");
         datasource.setPassword("urubu100");
 
