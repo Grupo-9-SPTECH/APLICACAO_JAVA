@@ -20,7 +20,7 @@ public class ConexaoDocker {
 
         //conexao docker
         datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        datasource.setUrl("jdbc:mysql://localhost:3306/grupo9");
+        datasource.setUrl("jdbc:mysql://localhost:3306/grupo9?useTimezone=true&serverTimezone=UTC"); 
         datasource.setUsername("root");
         datasource.setPassword("urubu100");
 
