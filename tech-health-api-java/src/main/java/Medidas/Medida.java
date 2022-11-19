@@ -25,6 +25,8 @@ public class Medida {
 
     ProcessoGrupo grupoProcesso = new ProcessoGrupo();
     List<Processo> processos = grupoProcesso.getProcessos();
+    DiscoGrupo grupoDeDiscos = new DiscoGrupo();
+    List<Disco> discos = grupoDeDiscos.getDiscos();
 
     private Integer idMedida;
     private Integer idMaquina;
@@ -38,13 +40,13 @@ public class Medida {
 
     public Double pegarPercent_Memoria() {
         Double memoria_Em_Uso = 0.0;
-        if (Conversor.formatarBytes(memoria.getEmUso()).contains("MiB")){
+        if (Conversor.formatarBytes(memoria.getEmUso()).contains("MiB")) {
             memoria_Em_Uso = Double.parseDouble(Conversor.formatarBytes(memoria.getEmUso()).replace("MiB", "").replaceAll(",", "."));
         }
-        if (Conversor.formatarBytes(memoria.getEmUso()).contains("GiB")){
+        if (Conversor.formatarBytes(memoria.getEmUso()).contains("GiB")) {
             memoria_Em_Uso = Double.parseDouble(Conversor.formatarBytes(memoria.getEmUso()).replace("GiB", "").replaceAll(",", "."));
         }
-        
+
         Double capacidade_Total_Memoria = Double.parseDouble(Conversor.formatarBytes(memoria.getTotal()).replace("GiB", "").replaceAll(",", "."));
         Double percent_Memoria_Em_Uso = (memoria_Em_Uso * 100) / capacidade_Total_Memoria;
         return percent_Memoria_Em_Uso;
@@ -59,7 +61,7 @@ public class Medida {
             }
             break;
         }
-        return uso_Cpu_Processo;
+        return uso_Cpu_Processo / 10;
 
     }
 
@@ -75,28 +77,32 @@ public class Medida {
         return uso_Ram_Processo;
     }
 
-//    public Double pegarPercentDisco() {
-//        //Double percent_Uso_Disco = 0.0; 
-//        String usoDiscoGb = "";
-//        String usoNumbersOnly = "";
-//        Double tamanho_Disco = 0.0;
-//        for (Disco itemDisco : discos) {
-//            for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
-//                usoDiscoGb = Conversor.formatarBytes(itemDisco.getBytesDeEscritas() + itemDisco.getBytesDeLeitura());
-//                usoNumbersOnly = usoDiscoGb.replace("GiB", "").replaceAll(",", ".");
-//                tamanho_Disco = Double.parseDouble(Conversor.formatarBytes(itemDisco.getTamanho()).substring(0, 5).replaceAll(",", "."));
-//                Double usoDisco = Double.parseDouble(usoNumbersOnly);
-//                Double percent_Uso_Disco = (usoDisco * 100) / tamanho_Disco;
-//            }
-//            break;
-//        }
-//        
-//        
-//        return percent_Uso_Disco;
-//    }
+    public Double pegarPercentDisco() {
+        Double percent_Uso_Disco = 0.0;
+        for (Disco itemDisco : discos) {
+            for (int contDisco = (discos.size() - 1); contDisco < discos.size(); contDisco++) {
+
+                String usoDiscoGb = Conversor.formatarBytes(itemDisco.getBytesDeEscritas() + itemDisco.getBytesDeLeitura());
+                String usoNumbersOnly = "";
+                if (Conversor.formatarBytes(itemDisco.getBytesDeEscritas() + itemDisco.getBytesDeLeitura()).contains("GiB")) {
+                    usoNumbersOnly = usoDiscoGb.replace("GiB", "").replaceAll(",", ".");
+                }
+                if (Conversor.formatarBytes(itemDisco.getBytesDeEscritas() + itemDisco.getBytesDeLeitura()).contains("MiB")) {
+                    usoNumbersOnly = usoDiscoGb.replace("MiB", "").replaceAll(",", ".");
+                }
+
+                Double usoDisco = Double.parseDouble(usoNumbersOnly);
+                Double tamanho_Disco = Double.parseDouble(Conversor.formatarBytes(itemDisco.getTamanho()).replace("GiB", "").replaceAll(",", "."));
+                percent_Uso_Disco = (usoDisco * 100) / tamanho_Disco;
+
+            }
+            break;
+        }
+        return percent_Uso_Disco;
+    }
 
     public Double pegarUsoProcessador() {
-        Double uso_Processador = processador.getUso() / 10;
+        Double uso_Processador = processador.getUso() * 10;
         return uso_Processador;
     }
 
