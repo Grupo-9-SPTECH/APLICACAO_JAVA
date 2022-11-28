@@ -132,7 +132,7 @@ public class MainComputador {
                 arq = new FileWriter("C:\\Users\\Public//maquina.txt");
 
             } else {
-                arq = new FileWriter("/home/ubuntu/Desktop//maquina.txt");
+                arq = new FileWriter("/home/ubuntu//maquina.txt");
 
             }
             PrintWriter gravarArq = new PrintWriter(arq);
