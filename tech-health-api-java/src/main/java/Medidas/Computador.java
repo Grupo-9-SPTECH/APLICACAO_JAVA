@@ -12,6 +12,11 @@ import com.github.britooo.looca.api.group.sistema.Sistema;
 import com.github.britooo.looca.api.group.temperatura.Temperatura;
 import com.github.britooo.looca.api.util.Conversor;
 import java.util.List;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -24,7 +29,10 @@ public class Computador {
     DiscoGrupo grupoDeDiscos = new DiscoGrupo();
     List<Disco> discos = grupoDeDiscos.getDiscos();
     Memoria memoria = new Memoria();
-    
+    //CONEXAO BANCO
+    ConexaoTechHealth connection = new ConexaoTechHealth();
+    JdbcTemplate banco = connection.getConexao();
+
     //ATRIBUTOS
     private Integer idMaquina;
     private String nome_Hospital;
@@ -61,11 +69,11 @@ public class Computador {
         return numero_CPU_fisica;
     }
 
-    public Double pegarFrequencia(){
+    public Double pegarFrequencia() {
         Double frequencia_Processador = Double.parseDouble(Conversor.formatarBytes(processador.getFrequencia()).replace("GiB", "").replaceAll(",", "."));
         return frequencia_Processador;
     }
-    
+
     public Double pegarTamanho_Disco() {
         Double tamanho_Disco = 0.0;
         for (Disco itemDisco : discos) {
@@ -76,88 +84,36 @@ public class Computador {
         }
         return tamanho_Disco;
     }
-    
-    public Double pegarMemoria_Total (){
+
+    public Double pegarMemoria_Total() {
         Double capacidade_Total_Memoria = Double.parseDouble(Conversor.formatarBytes(memoria.getTotal()).replace("GiB", "").replaceAll(",", "."));
-        return capacidade_Total_Memoria;     
+        return capacidade_Total_Memoria;
     }
-   
+
     //GETTERS e SETTERS
-    public void setIdMaquina(Integer idMaquina) {
-        this.idMaquina = idMaquina;
-    }
-
     public String getNome_Hospital() {
-        return nome_Hospital;
-    }
 
-    public void setNome_Hospital(String nome_Hospital) {
-        this.nome_Hospital = nome_Hospital;
+        return nome_Hospital;
     }
 
     public String getAla_Hospitalar() {
         return ala_Hospitalar;
     }
 
+    public void setIdMaquina(Integer idMaquina) {
+        this.idMaquina = idMaquina;
+    }
+
+    public void setNome_Hospital(String nome_Hospital) {
+        this.nome_Hospital = nome_Hospital;
+    }
+
     public void setAla_Hospitalar(String ala_Hospitalar) {
         this.ala_Hospitalar = ala_Hospitalar;
     }
 
-    public String getSistema_Operacional() {
-        return sistema_Operacional;
-    }
+    
 
-    public void setSistema_Operacional(String sistema_Operacional) {
-        this.sistema_Operacional = sistema_Operacional;
-    }
-
-    public String getFabricante() {
-        return fabricante;
-    }
-
-    public void setFabricante(String fabricante) {
-        this.fabricante = fabricante;
-    }
-
-    public String getNome_Processador() {
-        return nome_Processador;
-    }
-
-    public void setNome_Processador(String nome_Processador) {
-        this.nome_Processador = nome_Processador;
-    }
-
-    public Double getCapacidade_Total_Memoria() {
-        return capacidade_Total_Memoria;
-    }
-
-    public void setCapacidade_Total_Memoria(Double capacidade_Total_Memoria) {
-        this.capacidade_Total_Memoria = capacidade_Total_Memoria;
-    }
-
-    public Double getTamanho_Disco() {
-        return tamanho_Disco;
-    }
-
-    public void setTamanho_Disco(Double tamanho_Disco) {
-        this.tamanho_Disco = tamanho_Disco;
-    }
-
-    public Integer getNumero_CPU_fisica() {
-        return numero_CPU_fisica;
-    }
-
-    public void setNumero_CPU_fisica(Integer numero_CPU_fisica) {
-        this.numero_CPU_fisica = numero_CPU_fisica;
-    }
-
-    public Double getFrequencia_Processador() {
-        return frequencia_Processador;
-    }
-
-    public void setFrequencia_Processador(Double frequencia_Processador) {
-        this.frequencia_Processador = frequencia_Processador;
-    }
 
     //TO STRING -> COMO VAI APARECER A MENSAGEM
     @Override
@@ -179,33 +135,33 @@ public class Computador {
                 .append("\n");
 
         sb.append("Sistema Operacional: ")
-                .append(getSistema_Operacional())
+                .append(pegarNomeSistemaOperacional())
                 .append("\n");
 
         sb.append("Fabricante: ")
-                .append(getFabricante())
+                .append(pegarNomeFabricante())
                 .append("\n");
 
         sb.append("Nome do Processador: ")
-                .append(getNome_Processador())
+                .append(pegarNome_Processador())
                 .append("\n");
 
         sb.append("Frequencia do Processador: ")
-                .append(getFrequencia_Processador())
+                .append(pegarFrequencia())
                 .append("\n");
 
         sb.append("Capacidade Total da Memoria: ")
-                .append(getCapacidade_Total_Memoria())
+                .append(pegarMemoria_Total())
                 .append(" GiB")
                 .append("\n");
 
         sb.append("Tamanho do Disco: ")
-                .append(getTamanho_Disco())
+                .append(pegarTamanho_Disco())
                 .append(" GiB")
                 .append("\n");
 
         sb.append("Numero de CPUs fisicas: ")
-                .append(getNumero_CPU_fisica())
+                .append(pegarNumero_CPU_fisica())
                 .append("\n");
 
         return sb.toString();

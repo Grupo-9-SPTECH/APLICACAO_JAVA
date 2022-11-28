@@ -21,10 +21,17 @@ public class ConexaoDocker {
         BasicDataSource datasource = new BasicDataSource();
 
         //conexao docker
-        datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        datasource.setUrl("jdbc:mysql://localhost:3306/grupo9?autoReconnect=true&useSSL=false"); 
+//        datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+//        datasource.setUrl("jdbc:mysql://localhost:3306/grupo9?autoReconnect=true&useSSL=false"); 
+//        datasource.setUsername("root");
+//        datasource.setPassword("urubu100");
+                datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+//
+        datasource.setUrl("jdbc:mysql://localhost:3306/grupo9?useTimezone=true&serverTimezone=UTC"); //grupo9 = meu database
+
         datasource.setUsername("root");
-        datasource.setPassword("urubu100");
+
+        datasource.setPassword("jujuba123");
 
         conexao2 = new JdbcTemplate(datasource);
     }

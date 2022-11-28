@@ -1,3 +1,4 @@
+create database grupo9;
 use grupo9;
 
 	CREATE TABLE hospital (
@@ -5,15 +6,10 @@ use grupo9;
 	nome_Hospital varchar (45),
 	cnpj varchar(45),
 	endereco varchar (100),
-	numeroHospital int
+    bairro varchar (100),
+    cidade varchar (100),
+    UF char(2)
 	);
-    
-insert into hospital values
-(null, "Santa Catarina", "59.546.515/0001-34", "Av. Paulista", 200);
-
--- azure
--- insert into hospital values 
--- ('Santa Catarina', '59.546.515/0001-34', 'Av. Paulista', 200);
 
 create table usuario (
 id int primary key auto_increment, -- IDENTITY(1,1),
@@ -27,8 +23,8 @@ senha varchar (45)
 
 
 CREATE TABLE maquina (
-idMaquina int primary key auto_increment, -- IDENTITY(1,1),
-ala_Hospitalar varchar (45), -- inserir manualmente
+idMaquina int primary key, -- IDENTITY(1,1),
+ala_Hospitalar varchar (100), -- inserir manualmente
 sistema_Operacional varchar (100), -- sistema.getSistema
 fabricante varchar (45), -- sistema.getfabricante
 nome_Processador varchar (100), -- processador get.nome
@@ -52,3 +48,7 @@ momento varchar (50), -- datetime default current_timestamp
 fkMaquina int,
 foreign key (fkMaquina) references maquina (idMaquina)
 );
+
+-- drop database grupo9;
+
+select * from maquina;

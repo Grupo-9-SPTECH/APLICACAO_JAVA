@@ -35,9 +35,8 @@ public class MainComputador {
         JdbcTemplate banco = connection.getConexao();
 
         //vm
-//        ConexaoDocker connection2 = new ConexaoDocker();
-//        JdbcTemplate bancoVM = connection2.getConexao();
-
+        ConexaoDocker connection2 = new ConexaoDocker();
+        JdbcTemplate bancoVM = connection2.getConexao();
 //INSTANCIANDO CLASSES
         Computador comp = new Computador();
         Medida medida = new Medida();
@@ -45,9 +44,14 @@ public class MainComputador {
         JSONObject json = new JSONObject();
         Funcionario loginFuncionario = new Funcionario();
         List<Integer> listaFK = new ArrayList<>();
+        Integer verNome = 0;
 
         Integer cont = 0;
         Integer login = 0;
+        Integer respID = 0;
+        
+        List<Integer> listaFkComp = new ArrayList<>();
+        
 
         while (cont != 1) {
             System.out.println("Digite seu email: ");
@@ -82,20 +86,20 @@ public class MainComputador {
             Integer contCorreto = 0;
 
             while (contCorreto == 0) {
-                System.out.println("Você já possui uma máquina? [s/n]");
+                System.out.println("Você já possui uma máquina cadastrada com as informações de hardware? [s/n]");
                 Scanner leitor4 = new Scanner(System.in);
                 String respMaquina = leitor4.nextLine();
 
                 if (respMaquina.equals("s")) {
                     System.out.println("Qual o ID dela?");
                     Scanner leitor5 = new Scanner(System.in);
-                    Integer respID = leitor5.nextInt();
+                    respID = leitor5.nextInt();
 
                     Integer contID = 0;
 
-                    List<Computador> listaMaquinasID = banco.query("select idMaquina from maquina order by idMaquina", new BeanPropertyRowMapper(Computador.class));
+                    List<Computador> listaMaquinasID = banco.query("select idMaquina from maquina where idMaquina = ?", new BeanPropertyRowMapper(Computador.class), respID);
                     for (Computador itemMaquinaID : listaMaquinasID) {
-                        if (respID == itemMaquinaID.getIdMaquina()) {
+                        if (respID == listaMaquinasID.size()) {
                             contID++;
                         }
                     }
@@ -103,8 +107,7 @@ public class MainComputador {
                     if (contID > 0) {
                         System.out.println("Você possui a máquina!");
                         contCorreto++;
-
-                        System.out.println("Inserindo medidas");
+                        verNome = respID;
 
                         listaFK.add(respID);
 
@@ -113,7 +116,7 @@ public class MainComputador {
                     }
                 } else {
                     contSmaq++;
-                    System.out.println("Vamos continuar o cadastro!");
+                    System.out.println("\nVamos continuar o cadastro!");
                     break;
                 }
 
@@ -137,73 +140,115 @@ public class MainComputador {
             //CADASTRO DA MAQUINA
             System.out.println("\n\nCADASTRO DA MÁQUINA");
 
-            // input para o usuario escrever qual ala hospitalar a maquina esta
-            System.out.println("\nAla em que a máquina está inserida: ");
-            Scanner leitor3 = new Scanner(System.in);
-            String alaHospitalar = leitor3.nextLine();
+            //fkHospital
+            List<Hospital> listaIDhospital = banco.query("select idHospital from hospital", new BeanPropertyRowMapper(Hospital.class));
 
-            //futuro fkHospital
-            List<Hospital> listaHospitais = banco.query("select idHospital, nome_Hospital from hospital", new BeanPropertyRowMapper(Hospital.class));
-            Integer fkHospital = listaHospitais.size();
+            List<Hospital> listaHospitais = banco.query("select idHospital, nome_Hospital, cnpj, endereco, bairro, cidade, uf  from hospital"
+                    + " where idHospital = ?", new BeanPropertyRowMapper(Hospital.class), 1);
+
+            Integer fkHospital = listaIDhospital.size();
+            List<Computador> listaIDmaq = banco.query("select idMaquina from maquina", new BeanPropertyRowMapper(Computador.class));
+
+            List<Computador> listaAla = banco.query("select ala_Hospitalar from maquina", new BeanPropertyRowMapper(Computador.class));
+            //  List;
 
             //azure
-            banco.update("INSERT INTO maquina VALUES (?, ?,?, ?, ?, ?, ?, ?, ?)",
-                    alaHospitalar, comp.pegarNomeSistemaOperacional(), comp.pegarNomeFabricante(), comp.pegarNome_Processador(),
-                    comp.pegarFrequencia(), comp.pegarMemoria_Total(), comp.pegarTamanho_Disco(), comp.pegarNumero_CPU_fisica(), "1");
+            banco.update("UPDATE maquina set sistema_Operacional = ?, fabricante = ?, nome_Processador = ?, frequencia_Processador = ?, "
+                    + "capacidade_Total_Memoria = ?, tamanho_Disco = ?, numero_CPU_fisica =  ?, fkHospital = ? where idMaquina = ?",
+                    comp.pegarNomeSistemaOperacional(), comp.pegarNomeFabricante(), comp.pegarNome_Processador(),
+                    comp.pegarFrequencia(), comp.pegarMemoria_Total(), comp.pegarTamanho_Disco(), comp.pegarNumero_CPU_fisica(),
+                    fkHospital, 1);
 
-            System.out.println("Dados Inseridos no SQL Server");
+            System.out.println("Máquina inserida no SQL Server");
 
             //vm
-            //            bancoVM.update("INSERT INTO maquina VALUES (?, ?, ?,?, ?, ?, ?, ?, ?, ?)",
-            //                    null, alaHospitalar, comp.pegarNomeSistemaOperacional(), comp.pegarNomeFabricante(), comp.pegarNome_Processador(),
-            //                    comp.pegarFrequencia(), comp.pegarMemoria_Total(), comp.pegarTamanho_Disco(), comp.pegarNumero_CPU_fisica(), "1");
-            //System.out.println("Maquina Inserida no banco de dados");
+            //Computador ala = listaAla.get(listaAla.size()-1);;
+            String ala = "";
 
+            //ARRUMAR!!!
+            for (Computador itemAla : listaAla) {
+                if (listaIDmaq.size() == listaAla.size()) {
+                    ala = itemAla.toString().substring(1, 30);
+                }
+            }
+            
+
+            bancoVM.update("INSERT into hospital VALUES (?, ?, ?, ?, ?, ?, ?)",
+                    null, "Santa Catarina", "23144563242243", "Av. Paulista", "Consolação", "São Paulo", "SP");
+
+            bancoVM.update("INSERT INTO maquina VALUES (?, ?, ?,?, ?, ?, ?, ?, ?, ?)",
+                    listaIDmaq.size(), listaAla.get(0), comp.pegarNomeSistemaOperacional(), comp.pegarNomeFabricante(), comp.pegarNome_Processador(),
+                    comp.pegarFrequencia(), comp.pegarMemoria_Total(), comp.pegarTamanho_Disco(), comp.pegarNumero_CPU_fisica(), 1);
+
+            System.out.println("\nMaquina inserida no MYSQL");
+
+            List<Computador> listaMaquinas = banco.query("select Hospital.nome_Hospital, idMaquina, ala_Hospitalar, sistema_Operacional, "
+                    + "fabricante, nome_Processador, "
+                    + "frequencia_Processador, capacidade_Total_Memoria, tamanho_Disco, numero_CPU_fisica from maquina\n"
+                    + " right join hospital on maquina.fkHospital = hospital.idHospital where idMaquina = ?;", new BeanPropertyRowMapper(Computador.class), listaIDmaq.size());
+
+            listaFkComp.add(listaIDmaq.size());
+            comp.setIdMaquina(listaIDmaq.size());
+            
+            System.out.println("\nEssa é a sua máquina:");
+            for (Computador itemMaquina : listaMaquinas) {
+                //Integer contMostrar = listaMaquinas.size();
+                if (listaMaquinas.size() == 1) {
+                    System.out.println(itemMaquina);
+                }
+                else {
+                    System.out.println("nao foi o print da maq");
+                }
+
+            }
             Date dataHoraAtual = new Date();
             String dataLog = new SimpleDateFormat("dd/MM/yyyy ").format(dataHoraAtual);
             String horaLog = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
             String momentoLog = dataLog + horaLog;
 
-            //adicionando o select da maquina numa lista
-            List<Computador> listaMaquinas = banco.query("select Hospital.nome_Hospital, idMaquina, ala_Hospitalar, sistema_Operacional, "
-                    + "fabricante, nome_Processador, "
-                    + "frequencia_Processador, capacidade_Total_Memoria, tamanho_Disco, numero_CPU_fisica from maquina\n"
-                    + " right join hospital on maquina.fkHospital = hospital.idHospital;", new BeanPropertyRowMapper(Computador.class));
-
+            //ARRUMAR A ALA!!!!
             //gravando arquivo txt para o log
-            gravarArq.printf("Id Maquina: %d\n"
-                    + "Ala Hospitalar: %s\n"
-                    + "Sistema Operacional: %s\n"
-                    + "Fabricante: %s\n"
-                    + "Nome do Processador: %s\n"
-                    + "Frequencia do Processador: %.2f\n"
-                    + "Capacidade da Memoria: %.2f\n"
-                    + "Tamanho do Disco: %.2f\n"
-                    + "Numero de CPUs Fisicas: %d\n"
-                    + "Momento: %s\n\n", listaMaquinas.size(), alaHospitalar, comp.pegarNomeSistemaOperacional(), comp.pegarNomeFabricante(),
+            gravarArq.printf("Id Maquina: %d\n\n"
+                    + "Ala Hospitalar: %s\n\n"
+                    + "Sistema Operacional: %s\n\n"
+                    + "Fabricante: %s\n\n"
+                    + "Nome do Processador: %s\n\n"
+                    + "Frequencia do Processador: %.2f\n\n"
+                    + "Capacidade da Memoria: %.2f\n\n"
+                    + "Tamanho do Disco: %.2f\n\n"
+                    + "Numero de CPUs Fisicas: %d\n\n"
+                    + "Momento: %s\n\n\n", 1, listaAla.get(0), comp.pegarNomeSistemaOperacional(), comp.pegarNomeFabricante(),
                     comp.pegarNome_Processador(), comp.pegarFrequencia(), comp.pegarMemoria_Total(), comp.pegarTamanho_Disco(),
                     comp.pegarNumero_CPU_fisica(), momentoLog
             );
 
             //log
-            gravarArq.printf("+-------------+%n\n");
+            gravarArq.printf("+-------------+%n\n");                      
             arq.close();
-            System.out.println("maquina gravada");
-
-            //mostrando na tela a maquina do usuario
-            System.out.println("\nSua máquina é essa: ");
-            for (Computador itemMaquina : listaMaquinas) {
-                if (itemMaquina.getIdMaquina() == (listaMaquinas.size())) {
-                    System.out.println(itemMaquina);
-                }
+            if (comp.pegarNomeFabricante().equals("Microsoft")) {
+                System.out.println("Maquina gravada no log, para ver basta seguir esse caminho: C:\\Users\\Public//maquina.txt");               
+            } else {
+                 System.out.println("Maquina gravada no log, para ver basta seguir esse caminho: /home/ubuntu/Desktop//maquina.txt");
 
             }
+            
 
         }
         List<Computador> listaMaquinas2 = banco.query("select Hospital.nome_Hospital, idMaquina, ala_Hospitalar, sistema_Operacional, "
                 + "fabricante, nome_Processador, "
                 + "frequencia_Processador, capacidade_Total_Memoria, tamanho_Disco, numero_CPU_fisica from maquina\n"
-                + " right join hospital on maquina.fkHospital = hospital.idHospital;", new BeanPropertyRowMapper(Computador.class));
+                + " right join hospital on maquina.fkHospital = hospital.idHospital where idMaquina = ?;", new BeanPropertyRowMapper(Computador.class), verNome);
+
+        if (contSmaq == 0) {
+
+            for (Computador itemMaquina : listaMaquinas2) {
+                if (verNome == listaMaquinas2.size()) {
+                    System.out.println("\nSua máquina é essa: ");
+                    System.out.println(itemMaquina);
+                }
+
+            }
+        }
 
         //INSERINDO MEDIDAS NA TABELA de 5 em 5 segundos
         new Timer().scheduleAtFixedRate(new TimerTask() {
@@ -216,7 +261,7 @@ public class MainComputador {
                     fkComp = listaFK.get(0);
                 } else {
                     //fk vira o ultimo id da maquina cadastrada
-                    fkComp = listaMaquinas2.size();
+                    fkComp = listaFkComp.size();
                 }
 
                 //variaveis pra pegar o momento da medida
@@ -225,21 +270,22 @@ public class MainComputador {
                 String hora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
                 String momento = data + hora;
 
+                //insert azure
                 banco.update("INSERT INTO medida VALUES ( ?, ?, ?, ?, ?, ?, ?)",
                         medida.pegarPercent_Memoria(), medida.pegarCPU_Processo(),
                         medida.pegarUsoProcessador(), medida.pegarUsoRAM(),
                         medida.pegarPercentDisco(), momento, fkComp);
 
-                //insert docker
-//                            bancoVM.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-//                                    null, medida.pegarPercent_Memoria(), medida.pegarCPU_Processo(),
-//                                    medida.pegarUsoProcessador(), medida.pegarUsoRAM(),
-//                                    percent_Uso_Disco, momento, fkComp);
+                //insert mysql
+                bancoVM.update("INSERT INTO medida VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                        null, medida.pegarPercent_Memoria(), medida.pegarCPU_Processo(),
+                        medida.pegarUsoProcessador(), medida.pegarUsoRAM(),
+                        medida.pegarPercentDisco(), momento, fkComp);
                 System.out.println("MEDIDAS INSERIDAS");
 
                 //slack
                 if (medida.pegarPercent_Memoria() > 70.0) {
-                    json.put("text", "ID da máquina: " + listaMaquinas2.size()
+                    json.put("text", "ID da máquina: " + fkComp
                             + "\nMemoria acima do limite!!!!"
                             + "\nMemoria: " + medida.pegarPercent_Memoria()
                             + "\nMomento: " + momento);

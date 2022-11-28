@@ -19,14 +19,6 @@ public class ConexaoTechHealth {
 
         BasicDataSource datasource = new BasicDataSource();
 
-        //conexao para h2
-//        datasource.setDriverClassName("org.h2.Driver");
-//        
-//        datasource.setUrl("jdbc:h2:file:./meu_banco");
-//               
-//        datasource.setUsername("sa");
-//
-//        datasource.setPassword("");
         //conexão para mysql worckbench
 //        datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 //
