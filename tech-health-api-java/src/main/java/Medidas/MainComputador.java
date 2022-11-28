@@ -149,7 +149,7 @@ public class MainComputador {
             Integer fkHospital = listaIDhospital.size();
             List<Computador> listaIDmaq = banco.query("select idMaquina from maquina", new BeanPropertyRowMapper(Computador.class));
 
-            List<Computador> listaAla = banco.query("select ala_Hospitalar from maquina", new BeanPropertyRowMapper(Computador.class));
+            List<String> listaAla = banco.query("select ala_Hospitalar from maquina", new BeanPropertyRowMapper(Ala.class));
             //  List;
 
             //azure
@@ -163,21 +163,14 @@ public class MainComputador {
 
             //vm
             //Computador ala = listaAla.get(listaAla.size()-1);;
-            String ala = "";
-
-            //ARRUMAR!!!
-            for (Computador itemAla : listaAla) {
-                if (listaIDmaq.size() == listaAla.size()) {
-                    ala = itemAla.toString().substring(1, 30);
-                }
-            }
+            String ala = "Recepção";
             
 
             bancoVM.update("INSERT into hospital VALUES (?, ?, ?, ?, ?, ?, ?)",
                     null, "Santa Catarina", "23144563242243", "Av. Paulista", "Consolação", "São Paulo", "SP");
 
             bancoVM.update("INSERT INTO maquina VALUES (?, ?, ?,?, ?, ?, ?, ?, ?, ?)",
-                    listaIDmaq.size(), listaAla.get(0), comp.pegarNomeSistemaOperacional(), comp.pegarNomeFabricante(), comp.pegarNome_Processador(),
+                    listaIDmaq.size(), ala, comp.pegarNomeSistemaOperacional(), comp.pegarNomeFabricante(), comp.pegarNome_Processador(),
                     comp.pegarFrequencia(), comp.pegarMemoria_Total(), comp.pegarTamanho_Disco(), comp.pegarNumero_CPU_fisica(), 1);
 
             System.out.println("\nMaquina inserida no MYSQL");
@@ -217,7 +210,7 @@ public class MainComputador {
                     + "Capacidade da Memoria: %.2f\n\n"
                     + "Tamanho do Disco: %.2f\n\n"
                     + "Numero de CPUs Fisicas: %d\n\n"
-                    + "Momento: %s\n\n\n", 1, listaAla.get(0), comp.pegarNomeSistemaOperacional(), comp.pegarNomeFabricante(),
+                    + "Momento: %s\n\n\n", 1, ala, comp.pegarNomeSistemaOperacional(), comp.pegarNomeFabricante(),
                     comp.pegarNome_Processador(), comp.pegarFrequencia(), comp.pegarMemoria_Total(), comp.pegarTamanho_Disco(),
                     comp.pegarNumero_CPU_fisica(), momentoLog
             );

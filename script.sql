@@ -49,6 +49,6 @@ fkMaquina int,
 foreign key (fkMaquina) references maquina (idMaquina)
 );
 
--- drop database grupo9;
-
 select * from maquina;
+
+--  drop database grupo9;
