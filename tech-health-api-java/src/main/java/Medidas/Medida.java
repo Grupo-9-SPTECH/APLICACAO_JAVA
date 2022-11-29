@@ -61,7 +61,7 @@ public class Medida {
             }
             break;
         }
-        return uso_Cpu_Processo / 10;
+        return uso_Cpu_Processo;
 
     }
 
@@ -102,7 +102,7 @@ public class Medida {
     }
 
     public Double pegarUsoProcessador() {
-        Double uso_Processador = processador.getUso() * 10;
+        Double uso_Processador = processador.getUso();
         return uso_Processador;
     }
 
