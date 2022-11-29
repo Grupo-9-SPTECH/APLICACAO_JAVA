@@ -35,8 +35,8 @@ public class MainComputador {
         JdbcTemplate banco = connection.getConexao();
 
         //vm
-//        ConexaoDocker connection2 = new ConexaoDocker();
-//        JdbcTemplate bancoVM = connection2.getConexao();;
+        ConexaoDocker connection2 = new ConexaoDocker();;
+        JdbcTemplate bancoVM = connection2.getConexao();;
 //INSTANCIANDO CLASSES
         Computador comp = new Computador();
         Medida medida = new Medida();
@@ -178,7 +178,7 @@ public class MainComputador {
             List<Computador> listaMaquinas = banco.query("select Hospital.nome_Hospital, idMaquina, ala_Hospitalar, sistema_Operacional, "
                     + "fabricante, nome_Processador, "
                     + "frequencia_Processador, capacidade_Total_Memoria, tamanho_Disco, numero_CPU_fisica from maquina\n"
-                    + " right join hospital on maquina.fkHospital = hospital.idHospital where idMaquina = ?;", new BeanPropertyRowMapper(Computador.class), listaIDmaq.size());
+                    + " right join hospital on maquina.fkHospital = hospital.idHospital where idMaquina = ?;", new BeanPropertyRowMapper(Computador.class), 1);
 
             listaFkComp.add(listaIDmaq.size());
             comp.setIdMaquina(listaIDmaq.size());
@@ -300,6 +300,7 @@ public class MainComputador {
                         new BeanPropertyRowMapper(Medida.class), 1);
 
                 //mostrando a ultima medida inserida
+                
                 System.out.println("\n" + listaMedidas.get(listaMedidas.size() - 1));
 
             }
