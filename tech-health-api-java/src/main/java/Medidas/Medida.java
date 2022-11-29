@@ -61,7 +61,7 @@ public class Medida {
             }
             break;
         }
-        return uso_Cpu_Processo;
+        return uso_Cpu_Processo + 1 * 10;
 
     }
 
